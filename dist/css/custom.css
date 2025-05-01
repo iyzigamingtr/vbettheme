@@ -1,0 +1,733 @@
+
+
+
+/* ----------------------------------------------
+        MAIN_VISUAL
+---------------------------------------------- */
+.main_visual .pagination {position:relative; bottom:0; overflow:hidden; margin:0 -12px; }
+.main_visual .pagination:before {content:''; z-index:-1; position:absolute; right:calc(100% - 13px); top:calc(50% - 12px); width:24px; height:24px; box-shadow:-10px 0 0 24px #000000e6; border-radius:50%; background-color:transparent; }
+.main_visual .pagination:after {content:''; z-index:-1; position:absolute; left:calc(100% - 13px); top:calc(50% - 12px); width:24px; height:24px; box-shadow:-10px 0 0 24px #000000e6; border-radius:50%; background-color:transparent; }
+
+
+
+
+/* ----------------------------------------------
+        CASINO_DETAIL
+---------------------------------------------- */
+.casino_detail .content {min-height:calc(100vh - 131px); }
+.casino_detail .content_box {width:100%; height:calc(100vh - 131px); }
+.casino_detail_box {width:100%; height:68vh; }
+.content_box .grid .casino_detail_box {height:50vh;}
+
+@media all and (max-width:767px){
+    .content_box {padding-bottom:50px; height:auto;  }
+    .content_box .inner {padding:0; }
+
+    .casino_detail_box,
+    .casino_detail .content_box .grid .casino_detail_box {height:calc(100vh - 48px); }
+
+    .casino_detail header  ,
+    .casino_detail .mo_quick {display:none; }
+}
+
+/* ----------------------------------------------
+        GAME_DETAIL
+---------------------------------------------- */
+.game_detail .content {min-height:calc(100vh - 131px); }
+.game_detail .content_box {width:100%; height:calc(100vh - 131px); }
+.game_detail .tab-content {overflow-y:auto; overflow-x:hidden; height:calc(100% - 43px); }
+
+@media all and (max-width:767px){
+    .game_detail footer {display:none; }
+}
+
+
+/* ----------------------------------------------
+        Esports > category
+---------------------------------------------- */
+.egame_all.active .icon,
+.egame_upcoming.active .icon,
+.egame_live.active .icon,
+.egame_results.active .icon {color:#fff !important; }
+
+.border_type[class^="egame_"],
+.border_type[class^="egame_"]:hover {overflow:hidden; position:relative; background:rgba(255,255,255,0.15); box-shadow:none; }
+.border_type[class^="egame_"]:before {content:''; position:absolute; left:0; top:0; width:2px; height:100%;}
+
+.egame_btn {transition:all 0.3s; }
+.egame_btn:hover,
+.egame_btn.active,
+.egame_btn:hover *,
+.egame_btn.active * {color:#fff; }
+.egame_btn:hover,
+.egame_btn.active {background-color:var(--primary-light-color); }
+.egame_btn:disabled:not(.active):hover {background:rgba(255,255,255,0.2) !important; box-shadow:none !important; }
+
+@media all and (max-width:768px){
+    .egame_btn:not(.active):hover {background:rgba(255,255,255,0.2) !important; box-shadow:none !important; }
+}
+
+.egame_all.active,
+.egame_all:hover {background:linear-gradient(to right,rgba(167, 31, 103,1) 0%,rgba(210, 38, 129,1) 100%); }
+.egame_all .icon {color:#a71f67; }
+
+.egame_upcoming.active,
+.egame_upcoming:hover {background:rgba(2,108,144,.6); box-shadow:0 0 8px #026c9099; }
+.egame_upcoming .icon {color:#0097b7; }
+
+.egame_live.active,
+.egame_live:hover {background:rgba(255,52,73,.6); box-shadow:0 0 8px #ff344999; }
+.egame_live .icon {color:#f55461; }
+
+.egame_results.active,
+.egame_results:hover {background:rgba(170,127,0,.6); box-shadow:0 0 8px #aa7f0099; }
+.egame_results .icon {color:gold; }
+
+.egame_counterstrike.active,
+.egame_counterstrike:hover {background:rgba(204,88,31,.6); box-shadow:0 0 8px #cc581f99; }
+.egame_counterstrike.border_type:before {background:linear-gradient(to bottom,#e58353,#cc581f); }
+.egame_counterstrike .icon {background: linear-gradient(to bottom,#e58353,#cc581f); color:#000; }
+.counterstrike .egame_btn:hover,
+.counterstrike .egame_btn.active {background:#cc581f; }
+.counterstrike .egame_btn:hover {box-shadow: 0 0 20px #cc581f; }
+
+.egame_dota2.active,
+.egame_dota2:hover {background:rgba(155,16,19,.6); box-shadow:0 0 8px #9b101399; }
+.egame_dota2.border_type:before {background:linear-gradient(to bottom,#e0171c,#9b1013); }
+.egame_dota2 .icon {background:linear-gradient(to bottom,#e0171c,#9b1013); color:#000; }
+.dota2 .egame_btn:hover,
+.dota2 .egame_btn.active {background:#9b1013; }
+.dota2 .egame_btn:hover {box-shadow: 0 0 20px #9b1013; }
+
+.egame_leaguoflegends.active,
+.egame_leaguoflegends:hover {background:linear-gradient(to right,#06849d,#034653); }
+.egame_leaguoflegends.border_type:before {background:linear-gradient(to bottom,#06849d,#034653); }
+.egame_leaguoflegends .icon {background:linear-gradient(to bottom,#06849d,#034653); color:#000; }
+.leaguoflegends .egame_btn:hover,
+.leaguoflegends .egame_btn.active {background:#034653; }
+.leaguoflegends .egame_btn:hover {box-shadow: 0 0 20px #034653; }
+
+.egame_valorant.active,
+.egame_valorant:hover {background:linear-gradient(to right,#df5e67,#c82833); }
+.egame_valorant.border_type:before {background:linear-gradient(to bottom,#df5e67,#c82833); }
+.egame_valorant .icon {background:linear-gradient(to bottom,#df5e67,#c82833); color:#000; }
+.valorant .egame_btn:hover,
+.valorant .egame_btn.active {background:#c82833; }
+.valorant .egame_btn:hover {box-shadow: 0 0 20px #c82833; }
+
+.egame_overwatch.active,
+.egame_overwatch:hover {background:linear-gradient(to right,#f9af6a,#f68720); }
+.egame_overwatch.border_type:before {background:linear-gradient(to bottom,#f9af6a,#f68720); }
+.egame_overwatch .icon {background:linear-gradient(to bottom,#f9af6a,#f68720); color:#000; }
+.overwatch .egame_btn:hover,
+.overwatch .egame_btn.active {background:#f68720; }
+.overwatch .egame_btn:hover {box-shadow: 0 0 20px #f68720; }
+
+.egame_rainbowsix.active,
+.egame_rainbowsix:hover {background:linear-gradient(to right,#8c9398,#666d72);}
+.egame_rainbowsix.border_type:before {background:linear-gradient(to bottom,#8c9398,#666d72); }
+.egame_rainbowsix .icon {background:linear-gradient(to bottom,#8c9398,#666d72); color:#000; }
+.rainbowsix .egame_btn:hover,
+.rainbowsix .egame_btn.active {background:#666d72; }
+.rainbowsix .egame_btn:hover {box-shadow: 0 0 20px #666d72; }
+
+.egame_crossfire.active,
+.egame_crossfire:hover {background:linear-gradient(to right,#cc9737,#926b25); }
+.egame_crossfire.border_type:before {background:linear-gradient(to bottom,#cc9737,#926b25); }
+.egame_crossfire .icon {background:linear-gradient(to bottom,#cc9737,#926b25); color:#000; }
+.crossfire .egame_btn:hover,
+.crossfire .egame_btn.active {background:#926b25; }
+.crossfire .egame_btn:hover {box-shadow: 0 0 20px #926b25; }
+
+.egame_kingofglory.active,
+.egame_kingofglory:hover {background:linear-gradient(to right,#9981b1,#73588e); }
+.egame_kingofglory.border_type:before {background:linear-gradient(to bottom,#9981b1,#73588e); }
+.egame_kingofglory .icon {background:linear-gradient(to bottom,#9981b1,#73588e); color:#000; }
+.kingofglory .egame_btn:hover,
+.kingofglory .egame_btn.active {background:#73588e; }
+.kingofglory .egame_btn:hover {box-shadow: 0 0 20px #73588e; }
+
+.egame_warcraft.active,
+.egame_warcraft:hover {background:linear-gradient(to right,#ea9730,#bb7013); }
+.egame_warcraft.border_type:before {background:linear-gradient(to bottom,#ea9730,#bb7013); }
+.egame_warcraft .icon {background:linear-gradient(to bottom,#ea9730,#bb7013); color:#000; }
+.warcraft .egame_btn:hover,
+.warcraft .egame_btn.active {background:#bb7013; }
+.warcraft .egame_btn:hover {box-shadow: 0 0 20px #bb7013; }
+
+.egame_mobilelegends.active,
+.egame_mobilelegends:hover {background:linear-gradient(to right,#c3a78a,#a98157);}
+.egame_mobilelegends.border_type:before {background:linear-gradient(to bottom,#c3a78a,#a98157); }
+.egame_mobilelegends .icon {background:linear-gradient(to right,#c3a78a,#a98157); color:#000; }
+.mobilelegends .egame_btn:hover,
+.mobilelegends .egame_btn.active {background:#a98157; }
+.mobilelegends .egame_btn:hover {box-shadow: 0 0 20px #a98157; }
+
+.egame_rocketleague.active,
+.egame_rocketleague:hover {background:linear-gradient(to right,#0670c9,#04477f); }
+.egame_rocketleague.border_type:before {background:linear-gradient(to bottom,#0670c9,#04477f); }
+.egame_rocketleague .icon {background:linear-gradient(to right,#0670c9,#04477f); color:#000; }
+.rocketleague .egame_btn:hover,
+.rocketleague .egame_btn.active {background:#04477f; }
+.rocketleague .egame_btn:hover {box-shadow: 0 0 20px #04477f; }
+
+.egame_pubg.active,
+.egame_pubg:hover {background:linear-gradient(to right,#e99c56,#d6751c); }
+.egame_pubg.border_type:before {background:linear-gradient(to bottom,#e99c56,#d6751c); }
+.egame_pubg .icon {background:linear-gradient(to right,#e99c56,#d6751c); color:#000; }
+.pubg .egame_btn:hover,
+.pubg .egame_btn.active {background:#d6751c; }
+.pubg .egame_btn:hover {box-shadow: 0 0 20px #d6751c; }
+
+.egame_apexlegends.active,
+.egame_apexlegends:hover {background:linear-gradient(to right,#de323d,#a81b24); }
+.egame_apexlegends.border_type:before {background:linear-gradient(to bottom,#de323d,#a81b24); }
+.egame_apexlegends .icon {background:linear-gradient(to right,#de323d,#a81b24); color:#000; }
+.apexlegends .egame_btn:hover,
+.apexlegends .egame_btn.active {background:#a81b24; }
+.apexlegends .egame_btn:hover {box-shadow: 0 0 20px #a81b24; }
+
+.egame_efootball.active,
+.egame_efootball:hover {background:linear-gradient(to right,#45ba46,#308231); }
+.egame_efootball.border_type:before {background:linear-gradient(to bottom,#45ba46,#308231); }
+.egame_efootball .icon {background:linear-gradient(to right,#45ba46,#308231); color:#000; }
+.efootball .egame_btn:hover,
+.efootball .egame_btn.active {background:#308231; }
+.efootball .egame_btn:hover {box-shadow: 0 0 20px #308231; }
+
+.egame_matches.active,
+.egame_matches:hover {background:linear-gradient(to right,#3b26ac 0%,#583de3 100%);  }
+.egame_matches:not(.active) .icon {color:#583de3; }
+
+.egame_boosted.active,
+.egame_boosted:hover {background:linear-gradient(to right,#097f18 0%,#00bf19 100%);  }
+
+.egame_multiple.active,
+.egame_multiple:hover {background:linear-gradient(to right,#ff5f00 0%,#ef9805 100%);  }
+
+.egame_upcoming.active,
+.egame_upcoming:hover {background:linear-gradient(to right,#026c90 0%,#0097b7 100%);  }
+.egame_upcoming:not(.active) .icon {color:#0097b7; }
+
+@media all and (min-width:768px){
+    .egame_match_h {height:calc(100vh - 340px); }
+}
+
+
+/* ----------------------------------------------
+        sport > category
+---------------------------------------------- */
+.i-soccer {color:#109121; }
+.i-basketball {color:#fca601; }
+.i-Tennis {color:#a19e3e; }
+.i-IceHockey {color:#50a2c6; }
+.i-volleyball {color:#dac179; }
+.i-handball {color:#42777f; }
+.i-tabletennis {color:#839d24; }
+.i-mma {color:#868686; }
+.i-americanFootball {color:#e7685c; }
+.i-baseball {color:#5caaa7; }
+.i-cricket {color:#1bab7d; }
+.i-cycling {color:#d9c68f; }
+.i-formula1 {color:#b8292b; }
+.i-politics {color:#641f6e; }
+.i-rugbyunion {color:#799755; }
+.i-Golf {color:#189946; }
+.i-Boxing {color:#0e7acc; }
+.i-Futsal {color:#65b5c2; }
+.i-Slap {color:#dac179; }
+
+.i-counterstrike2 {color:#cc581f; }
+.i-Archery {color:#f781d9; }
+.i-PistolShooting {color:#3c5182; }
+.i-Dota2 {color:#9b1013; }
+.i-LeagueOfLegends {color:#034653; }
+.i-MobileLegends {color:#a98157; }
+.i-CyberFootball {color:#308231; }
+.i-competition {color:#2275e9; }
+
+
+.bg-soccer {background-color:#109121; }
+.bg-basketball {background-color:#fca601; }
+.bg-Tennis {background-color:#a19e3e; }
+.bg-IceHockey {background-color:#50a2c6; }
+.bg-volleyball {background-color:#dac179; }
+.bg-handball {background-color:#42777f; }
+.bg-tabletennis {background-color:#839d24; }
+.bg-mma {background-color:#868686; }
+.bg-americanFootball {background-color:#e7685c; }
+.bg-baseball {background-color:#5caaa7; }
+.bg-cricket {background-color:#1bab7d; }
+.bg-cycling {background-color:#d9c68f; }
+.bg-formula1 {background-color:#b8292b; }
+.bg-politics {background-color:#641f6e; }
+.bg-rugbyunion {background-color:#799755; }
+.bg-Golf {background-color:#189946; }
+.bg-Boxing {background-color:#0e7acc; }
+.bg-Futsal {background-color:#65b5c2; }
+.bg-Slap {background-color:#dac179; }
+
+.bg-counterstrike2 {background-color:#cc581f; }
+.bg-Archery {background-color:#f781d9; }
+.bg-PistolShooting {background-color:#3c5182; }
+.bg-Dota2 {background-color:#9b1013; }
+.bg-LeagueOfLegends {background-color:#034653; }
+.bg-MobileLegends {background-color:#a98157; }
+.bg-CyberFootball {background-color:#308231; }
+.bg-competition {background-color:#0050bf; }
+
+.sport_calender button.active {--tw-bg-opacity:1; color:#000c24e6; }
+
+@media all and (min-width:768px){
+    .sport_calender {display:grid; grid-template-columns:repeat(auto-fill,minmax(94px,1fr)); grid-gap:5px; }
+}
+@media all and (max-width:768px){
+    .sport_calender {overflow-x:auto; white-space:nowrap; }
+    .sport_calender button.active {position:sticky; left:0; }
+}
+
+
+/* ----------------------------------------------
+            GAMECATE
+---------------------------------------------- */
+.sport_cate_wrap {overflow-y:auto; position:relative; height:calc(100vh - 425px); }
+.sport_cate_wrap .game_fold.open > button {z-index:10; position:sticky; top:0; background-color:#1a253b; }
+
+.gamecate_btn {border-left:2px solid transparent; }
+.gamecate_btn.active {border-left:2px solid rgb(var(--color-primary)); --tw-bg-opacity:0.2; }
+.gamecate_btn[data-cate="football"].active {border-left-color:#109121; }
+.gamecate_btn[data-cate="basketball"].active {border-left-color:#fca601; }
+.gamecate_btn[data-cate="Tennis"].active {border-left-color:#a19e3e; }
+.gamecate_btn[data-cate="IceHockey"].active {border-left-color:#50a2c6; }
+.gamecate_btn[data-cate="volleyball"].active {border-left-color:#dac179; }
+.gamecate_btn[data-cate="handball"].active {border-left-color:#42777f; }
+.gamecate_btn[data-cate="tabletennis"].active {border-left-color:#839d24; }
+.gamecate_btn[data-cate="mma"].active {border-left-color:#868686; }
+.gamecate_btn[data-cate="americanFootball"].active {border-left-color:#e7685c; }
+.gamecate_btn[data-cate="baseball"].active {border-left-color:#5caaa7; }
+.gamecate_btn[data-cate="cricket"].active {border-left-color:#1bab7d; }
+.gamecate_btn[data-cate="cycling"].active {border-left-color:#d9c68f; }
+.gamecate_btn[data-cate="formula1"].active {border-left-color:#b8292b; }
+.gamecate_btn[data-cate="politics"].active {border-left-color:#641f6e; }
+.gamecate_btn[data-cate="rugbyunion"].active {border-left-color:#799755; }
+.gamecate_btn[data-cate="Golf"].active {border-left-color:#189946; }
+
+.gamecate_btn[data-cate="counterstrike2"].active {border-left-color:#cc581f; }
+.gamecate_btn[data-cate="Archery"].active {border-left-color:#f781d9; }
+.gamecate_btn[data-cate="PistolShooting"].active {border-left-color:#3c5182; }
+.gamecate_btn[data-cate="Dota2"].active {border-left-color:#9b1013; }
+.gamecate_btn[data-cate="LeagueOfLegends"].active {border-left-color:#034653; }
+.gamecate_btn[data-cate="MobileLegends"].active {border-left-color:#a98157; }
+.gamecate_btn[data-cate="CyberFootball"].active {border-left-color:#308231; }
+
+.gamecate_bg_btn.active {z-index:2; position:sticky; left:0; }
+.gamecate_bg_btn.active * {color:#fff; }
+.gamecate_bg_btn[data-cate="football"].active {background-color:#109121; }
+.gamecate_bg_btn[data-cate="basketball"].active {background-color:#fca601; }
+.gamecate_bg_btn[data-cate="Tennis"].active {background-color:#a19e3e; }
+.gamecate_bg_btn[data-cate="IceHockey"].active {background-color:#50a2c6; }
+.gamecate_bg_btn[data-cate="volleyball"].active {background-color:#dac179; }
+.gamecate_bg_btn[data-cate="handball"].active {background-color:#42777f; }
+.gamecate_bg_btn[data-cate="tabletennis"].active {background-color:#839d24; }
+.gamecate_bg_btn[data-cate="mma"].active {background-color:#868686; }
+.gamecate_bg_btn[data-cate="americanFootball"].active {background-color:#e7685c; }
+.gamecate_bg_btn[data-cate="baseball"].active {background-color:#5caaa7; }
+.gamecate_bg_btn[data-cate="cricket"].active {background-color:#1bab7d; }
+.gamecate_bg_btn[data-cate="cycling"].active {background-color:#d9c68f; }
+.gamecate_bg_btn[data-cate="formula1"].active {background-color:#b8292b; }
+.gamecate_bg_btn[data-cate="politics"].active {background-color:#641f6e; }
+.gamecate_bg_btn[data-cate="rugbyunion"].active {background-color:#799755; }
+.gamecate_bg_btn[data-cate="Golf"].active {background-color:#189946; }
+
+.gamecate_bg_btn[data-cate="counterstrike2"].active {background-color:#cc581f; }
+.gamecate_bg_btn[data-cate="Archery"].active {background-color:#f781d9; }
+.gamecate_bg_btn[data-cate="PistolShooting"].active {background-color:#3c5182; }
+.gamecate_bg_btn[data-cate="Dota2"].active {background-color:#9b1013; }
+.gamecate_bg_btn[data-cate="LeagueOfLegends"].active {background-color:#034653; }
+.gamecate_bg_btn[data-cate="MobileLegends"].active {background-color:#a98157; }
+.gamecate_bg_btn[data-cate="CyberFootball"].active {background-color:#308231; }
+
+.sports_cate button {background-color:var(--bg-color); color:rgba(255,255,255,0.5); }
+.sports_cate button.active {z-index:10; position:sticky; left:0; color:rgba(255,255,255,1); background-color:#0d172f; }
+
+
+/* ----------------------------------------------
+            THEME
+---------------------------------------------- */
+.sp-theme-item-bc {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    cursor: pointer
+}
+
+.sp-theme-item-bc.active {
+    pointer-events: none
+}
+
+.sp-theme-item-bc.active:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.sp-theme-item-bc.active:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    border-radius: 4px;
+    color: rgba(var(--oc-1-sc),1);
+    background-color: rgba(var(--color-success));
+    transform: translate(-50%,-50%);
+    z-index: 1
+}
+
+.sp-theme-item-bc.active .sp-theme-container {
+    filter: blur(2px)
+}
+
+.sp-theme-container {
+    width: 100%
+}
+
+.sp-theme-container-content-top {
+    display: flex
+}
+
+.sp-theme-top-item:first-child {
+    width: 100%
+}
+
+.sp-theme-container-content {
+    padding: 5px
+}
+
+.theme-title-bc {
+    font-size: 16px;
+    color: rgba(var(--b-sc),.6)
+}
+
+.sp-theme-container-bc {
+    margin-top: 15px
+}
+
+.sp-theme-item-bc.active:after {
+    width: 21px;
+    height: 21px;
+    font: 13px/21px BetConstruct-Icons
+}
+
+.sp-theme-item-bc.dark.active:before {
+    background: rgba(0,0,0,.1)
+}
+
+.sp-theme-item-bc.dark .sp-theme-container-aside {
+    background: rgba(255,255,255,.1)
+}
+
+.sp-theme-item-bc.dark .sp-theme-container-aside .sp-theme-container-item:first-child {
+    background: rgba(255,255,255,.15)
+}
+
+.sp-theme-item-bc.dark .sp-theme-container-aside .sp-theme-container-item:before,.sp-theme-item-bc.dark .sp-theme-container-aside .sp-theme-container-item:after {
+    border-radius: 2px;
+    background: rgba(255,255,255,.2)
+}
+
+.sp-theme-item-bc.dark .sp-theme-container-aside .sp-theme-container-item:not(:first-child) {
+    background: rgba(255,255,255,.05)
+}
+
+.sp-theme-item-bc.dark .user-profile-nav-item-cursor {
+    background: rgba(255,255,255,.08)
+}
+
+.sp-theme-item-bc.dark .user-profile-nav-item-cursor.user-profile-cursor-visible:before {
+    background: rgba(255,255,255,.8)
+}
+
+.sp-theme-item-bc.dark .sp-theme-container-content-top {
+    border-bottom: 1px solid rgba(255,255,255,.1)
+}
+
+.sp-theme-item-bc.dark .sp-theme-top-item:first-child {
+    background: rgba(255,255,255,.05)
+}
+
+.sp-theme-item-bc.dark .sp-theme-top-item:not(:last-child):not(:nth-child(2)):before {
+    background: rgba(255,255,255,.05)
+}
+
+.sp-theme-item-bc.dark .sp-theme-top-item:not(:last-child):not(:nth-child(2)):after {
+    background: rgba(255,255,255,.05)
+}
+
+.sp-theme-item-bc.dark .sp-theme-top-item:last-child:before,.sp-theme-item-bc.dark .sp-theme-top-item:last-child:after {
+    background: rgba(255,255,255,.15)
+}
+
+.sp-theme-item-bc.dark .sp-theme-top-item:nth-child(2):before {
+    background: rgba(255,255,255,.15)
+}
+
+.sp-theme-item-bc.dark .sp-theme-top-item:nth-child(2):after {
+    background: rgba(255,255,255,.05)
+}
+
+.sp-theme-item-bc.dark .sp-theme-middle-item:nth-child(2):before,.sp-theme-item-bc.dark .sp-theme-middle-item:nth-child(3):before,.sp-theme-item-bc.dark .sp-theme-middle-item:nth-child(4):before,.sp-theme-item-bc.dark .sp-theme-middle-item:nth-child(5):before {
+    background: rgba(255,255,255,.2)
+}
+
+.sp-theme-item-bc.dark .sp-theme-middle-item:nth-child(2):after,.sp-theme-item-bc.dark .sp-theme-middle-item:nth-child(3):after,.sp-theme-item-bc.dark .sp-theme-middle-item:nth-child(4):after,.sp-theme-item-bc.dark .sp-theme-middle-item:nth-child(5):after {
+    background: rgba(255,255,255,.1)
+}
+
+.sp-theme-item-bc.dark .sp-theme-middle-item:first-child:before {
+    background: rgba(255,255,255,.1)
+}
+
+.sp-theme-item-bc.dark .sp-theme-middle-item:first-child:after {
+    background: rgba(255,255,255,.2)
+}
+
+.sp-theme-item-bc.dark .sp-theme-bottom-item {
+    background: rgba(255,255,255,.15)
+}
+
+.sp-theme-item-bc.dark .sp-theme-last-item {
+    background: rgba(255,255,255,.1)
+}
+
+.sp-theme-item-bc.light.active:before {
+    background: rgba(255,255,255,.1)
+}
+
+.sp-theme-item-bc.light .sp-theme-container-aside {
+    background: rgba(0,0,0,.1)
+}
+
+.sp-theme-item-bc.light .sp-theme-container-aside .sp-theme-container-item:first-child {
+    background: rgba(0,0,0,.15)
+}
+
+.sp-theme-item-bc.light .sp-theme-container-aside .sp-theme-container-item:before,.sp-theme-item-bc.light .sp-theme-container-aside .sp-theme-container-item:after {
+    border-radius: 2px;
+    background: rgba(0,0,0,.2)
+}
+
+.sp-theme-item-bc.light .sp-theme-container-aside .sp-theme-container-item:not(:first-child) {
+    background: rgba(0,0,0,.05)
+}
+
+.sp-theme-item-bc.light .user-profile-nav-item-cursor {
+    background: rgba(0,0,0,.08)
+}
+
+.sp-theme-item-bc.light .user-profile-nav-item-cursor.user-profile-cursor-visible:before {
+    background: rgba(0,0,0,.8)
+}
+
+.sp-theme-item-bc.light .sp-theme-container-content-top {
+    border-bottom: 1px solid rgba(0,0,0,.1)
+}
+
+.sp-theme-item-bc.light .sp-theme-top-item:first-child {
+    background: rgba(0,0,0,.05)
+}
+
+.sp-theme-item-bc.light .sp-theme-top-item:not(:last-child):not(:nth-child(2)):before {
+    background: rgba(0,0,0,.05)
+}
+
+.sp-theme-item-bc.light .sp-theme-top-item:not(:last-child):not(:nth-child(2)):after {
+    background: rgba(0,0,0,.05)
+}
+
+.sp-theme-item-bc.light .sp-theme-top-item:last-child:before,.sp-theme-item-bc.light .sp-theme-top-item:last-child:after {
+    background: rgba(0,0,0,.15)
+}
+
+.sp-theme-item-bc.light .sp-theme-top-item:nth-child(2):before {
+    background: rgba(0,0,0,.15)
+}
+
+.sp-theme-item-bc.light .sp-theme-top-item:nth-child(2):after {
+    background: rgba(0,0,0,.05)
+}
+
+.sp-theme-item-bc.light .sp-theme-middle-item:nth-child(2):before,.sp-theme-item-bc.light .sp-theme-middle-item:nth-child(3):before,.sp-theme-item-bc.light .sp-theme-middle-item:nth-child(4):before,.sp-theme-item-bc.light .sp-theme-middle-item:nth-child(5):before {
+    background: rgba(0,0,0,.2)
+}
+
+.sp-theme-item-bc.light .sp-theme-middle-item:nth-child(2):after,.sp-theme-item-bc.light .sp-theme-middle-item:nth-child(3):after,.sp-theme-item-bc.light .sp-theme-middle-item:nth-child(4):after,.sp-theme-item-bc.light .sp-theme-middle-item:nth-child(5):after {
+    background: rgba(0,0,0,.4)
+}
+
+.sp-theme-item-bc.light .sp-theme-middle-item:first-child:before {
+    background: rgba(0,0,0,.4)
+}
+
+.sp-theme-item-bc.light .sp-theme-middle-item:first-child:after {
+    background: rgba(0,0,0,.2)
+}
+
+.sp-theme-item-bc.light .sp-theme-bottom-item {
+    background: rgba(0,0,0,.15)
+}
+
+.sp-theme-item-bc.light .sp-theme-last-item {
+    background: rgba(0,0,0,.1)
+}
+
+.sp-theme-container {
+    display: flex
+}
+
+.sp-theme-container .user-profile-nav-item-cursor {
+    width: 1px;
+    height: 20px;
+    top: 20px
+}
+
+[dir=ltr] .sp-theme-container .user-profile-nav-item-cursor {
+    left: 11px
+}
+
+[dir=rtl] .sp-theme-container .user-profile-nav-item-cursor {
+    right: 11px
+}
+
+.sp-theme-container .user-profile-nav-item-cursor.user-profile-cursor-visible:before {
+    height: 5px
+}
+
+.sp-theme-container-aside {
+    width: 30%;
+    padding: 5px;
+    position: relative
+}
+
+.sp-theme-container-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4px;
+    border-radius: 2px
+}
+
+.sp-theme-container-item+.sp-theme-container-item {
+    margin-top: 3px
+}
+
+.sp-theme-container-item:not(:first-child) {
+    align-items: center
+}
+
+.sp-theme-container-item:before,.sp-theme-container-item:after {
+    content: ""
+}
+
+.sp-theme-container-item:before {
+    width: 5px;
+    height: 5px
+}
+
+.sp-theme-container-item:after {
+    width: 4px;
+    height: 4px
+}
+
+.sp-theme-container-item:first-child {
+    height: 40px;
+    padding-top: 5px
+}
+
+.sp-theme-container-item:not(:first-child) {
+    height: 9px
+}
+
+.sp-theme-container-content {
+    width: 70%
+}
+
+.sp-them-logo {
+    display: none
+}
+
+.sp-theme-container-content-top {
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 5px
+}
+
+.sp-theme-top-item {
+    height: 9px;
+    margin-bottom: 3px
+}
+
+.sp-theme-top-item:first-child {
+    margin-top: 3px;
+    background: rgba(var(--b-sc),.25)
+}
+
+.sp-theme-top-item:not(:first-child) {
+    width: 100%;
+    display: flex;
+    align-items: center
+}
+
+.sp-theme-top-item:not(:first-child):before,.sp-theme-top-item:not(:first-child):after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    border-radius: 2px
+}
+
+.sp-theme-top-item:not(:first-child):after {
+    margin-inline-start:3px}
+
+.sp-theme-container-content-middle {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end
+}
+
+.sp-theme-middle-item {
+    display: flex;
+    align-items: center
+}
+
+.sp-theme-middle-item+.sp-theme-middle-item {
+    margin-top: 3px
+}
+
+.sp-theme-middle-item:after {
+    margin-inline-start:10px}
+
+.sp-theme-middle-item:nth-child(2):before,.sp-theme-middle-item:nth-child(3):before,.sp-theme-middle-item:nth-child(4):before,.sp-theme-middle-item:nth-child(5):before {
+    background: rgba(var(--b-sc),.3)
+}
+
+.sp-theme-middle-item:nth-child(2):after,.sp-theme-middle-item:nth-child(3):after,.sp-theme-middle-item:nth-child(4):after,.sp-theme-middle-item:nth-child(5):after {
+    background: rgba(var(--b-sc),.15)
+}
+
+.sp-theme-middle-item:first-child:before {
+    background: rgba(var(--b-sc),.15)
+}
+
+.sp-theme-middle-item:first-child:after {
+    background: rgba(var(--b-sc),.3)
+}
+
+.sp-theme-container-content-top:before,.sp-theme-container-content-top:after,.sp-theme-middle-item:before,.sp-theme-middle-item:after {
+    content: "";
+    width: 5px;
+    height: 5px
+}
