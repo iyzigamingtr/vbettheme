@@ -1,0 +1,286 @@
+<?php include_once('lib/common.lib.php'); ?>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>vbet</title>
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<link href="https://design01.codeidea.io/link_style.css" rel="stylesheet">
+	<link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./dist/css/app.css" />
+	<link rel="stylesheet" href="./dist/css/layout.css" />
+	<link rel="stylesheet" href="./dist/css/icon.css" />
+	<link rel="stylesheet" href="./dist/css/custom.css" />
+	<style>
+		.ex_table th{
+			border-bottom-width:1px;	
+			border-right-width:1px;
+		}
+		.ex_table th:last-child{
+			border-right-width:0px;
+		}
+		header {display:none; }
+		.quick_menu {display:none; }
+		#wrap .side_menu {display:none; }
+	</style>
+</head>
+</body>
+
+<div class="publishing-help">
+	<span class="label not">작업중</span>
+	<span class="label popup">팝업</span>
+	<span class="label change">수정</span>
+	<span class="label add">최근 추가</span>
+</div>
+
+<?php
+function txtRecord($dir)
+{
+	if (is_dir($dir)) {
+		$handle  = opendir($dir);
+		$files = array();
+		while (false !== ($filename = readdir($handle))) {
+			if ($filename == "." || $filename == "..") continue;
+			if (is_file($dir . "/" . $filename)) {
+				$files[] = $filename;
+			}
+		}
+		closedir($handle);
+		rsort($files);
+		if (count($files) > 0) {
+			echo '<div class="_record rsort">';
+			echo '<ul>';
+			foreach ($files as $f) {
+				$name = '수정 ' . preg_replace("/[^0-9]*/s", "", $f);
+				echo '<li><a href="' . $dir . $f . '" target="_black">' . $name . '</a></li>';
+			}
+			echo '</ul>';
+			echo '</div>';
+		}
+	}
+}
+echo txtRecord('./@record/');
+?>
+
+<div id="publishingContainer">
+
+	<ul class="page-link">
+		<li class="" data-label="메인">
+            <ul>
+                <li><a href="./index_logout.html" target="_blank" class="">메인 - 로그인 전</a></li>
+                <li><a href="./index.html" target="_blank" class="">메인</a></li>
+            </ul>
+        </li>
+		<li class="" data-label="공통모달">
+			<ul>
+				<li>
+					<button class="pop-modal draggable_modal_open">calculator 모달</button>
+					<button class="pop-modal" onclick="rightPopToggle('notification-right')">notification 모달</button>
+					<button class="pop-modal" onclick="rightPopToggle('favorite-right')">favorite 모달</button>
+					<button class="pop-modal" onclick="rightPopToggle('settings-right')">setting 모달</button>
+				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('golden_age-modal')">GOLDEN AGE 모달</button>
+					<button class="pop-modal" onclick="modalOpen('sign_in-modal')">SIGN IN 모달</button>
+					<button class="pop-modal" onclick="modalOpen('reset_password-modal')">reset password 모달</button>
+					<button class="pop-modal" onclick="modalOpen('register-modal')">register 모달</button>
+					<button class="pop-modal" onclick="modalOpen('register2-modal')">register Step2 모달</button>
+					<button class="pop-modal" onclick="modalOpen('success-modal')">success 모달</button>
+				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('betslip-modal')">모바일 betslip 모달</button>
+					<button class="pop-modal" onclick="modalOpen('game-modal')">게임 모달</button>
+				</li>
+			</ul>
+		</li>
+		<li class="mt20" data-label="프로필">
+			<ul>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bet_all');">BET BUILDER HISTORY - All</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bet_open');">BET BUILDER HISTORY - Open bets</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bet_won');">BET BUILDER HISTORY - Won</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bet_lost');">BET BUILDER HISTORY - Lost</button>
+				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('balance_deposit');">Balance Management - Deposit</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('balance_transfer');">Balance Management - Transfer</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('balance_withdraw');">Balance Management - Withdraw</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('balance_history');">Balance Management - Transaction History</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('balance_status');">Balance Management - Withdraw Status</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('balance_my');">Balance Management - My Wallets</button>
+				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bonuses_spins');">Bonuses - Casino Free Spins</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bonuses_point');">Bonuses - Loyalty Points</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bonuses_histofy');">Bonuses - Bonus history</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bonuses_bonus');">Bonuses - Casino Bonus</button>
+				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('profile_detail');">My profile - Personal Details</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('profile_password');">My profile - Change Password</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('profile_time');">My profile - Time-Out</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('profile_account');">My profile - Verify Account</button>
+					<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('profile_twostep');">My profile - TWO-STEP AUTHENTICATION</button>
+				</li>
+				<li>
+				<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('message');">message</button>
+				<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('cashback');">cashback</button>
+				<button class="pop-modal" onclick="modalOpen('profile-modal'); profileTabClick('bonus_pie');">bonus - pie</button>
+				</li>
+			</ul>
+		</li>
+		<li class="mt20" data-label="메뉴">
+            <ul>
+				<li data-label="Live">
+					<ul>
+						<li>
+							<a href="./live.html" target="_blank">live</a>
+							<ul>
+								<li><a href="./live_torunament.html" target="_blank" class="">tournaments</a></li>
+								<li><a href="./live_calendar.html" target="_blank" class="">live calendar</a></li>
+							</ul>
+						</li>
+						<li><a href="./live_mobile.html" target="_blank">live - 모바일</a></li>
+						<li><a href="./live_detail_mobile.html" target="_blank">live detail - 모바일</a></li>
+					</ul>
+				</li>
+				<li data-label="Sports">
+					<ul>
+						<li>
+							<a href="./sports.html" target="_blank">Sports</a>
+							<ul>
+								<li><a href="./sports_tournament.html" target="_blank" class="">tournaments</a></li>
+								<li><a href="./sports_calendar.html" target="_blank" class="">sports calendar</a></li>
+								<li>
+									<a href="./sports_results.html" target="_blank" class="">sports results</a>
+									<ul>
+										<li><button class="pop-modal" onclick="modalOpen('sport_result-modal')">모바일 result 모달</button></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="./sports_mobile.html" target="_blank">sports - 카테고리 선택 - 모바일</a></li>
+						<li><a href="./sports_list_mobile.html" target="_blank">sports 리스트 - 모바일</a></li>
+						<li><a href="./sports_detail_mobile.html" target="_blank">sports detail - 모바일</a></li>
+					</ul>
+				</li>
+                <li class="mt10" data-label="Casino">
+					<ul>
+						<li>
+							<a href="./casino.html" target="_blank" class="">casino</a>
+							<ul>
+								<li><a href="./casino_detail.html" target="_blank" class="">casino detail - 1화면</a></li>
+								<li><a href="./casino_detail2.html" target="_blank" class="">casino detail - 2화면</a></li>
+								<li><button class="pop-modal" onclick="modalOpen('casino_list-modal')">카지노 리스트 모달</button></li>
+							</ul>
+						</li>
+						<li>
+							<a href="./casino_tournament.html" target="_blank">tournaments</a>
+							<ul>
+								<li><a href="./casino_tournament_detail.html" target="_blank">tournaments - detail</a></li>
+							</ul>
+						</li>
+						<li><a href="./casino_jackpot.html" target="_blank">jackpot</a></li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Live Casino">
+					<ul>
+						<li><a href="./live_casino.html" target="_blank" class="">live casino</a></li>
+						<li><a href="./live_casino_tournament.html" target="_blank">tournaments</a></li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Wonder Wheel">
+					<ul>
+						<li><a href="./wonderwheel.html" target="_blank" class="">Wonder Wheel</a></li>
+						<li>
+							<button class="pop-modal" onclick="modalOpen('wheel_promo_ticket-modal')">ticket 모달</button>
+							<button class="pop-modal" onclick="modalOpen('wheel_promo_result-modal')">모바일 result 모달</button>
+						</li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Belote">
+					<ul>
+						<li>
+							<a href="./belote.html" target="_blank" class="">belote</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Poker">
+					<ul>
+						<li>
+							<a href="./poker.html" target="_blank" class="">poker</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Esports">
+					<ul>
+						<li>
+							<a href="./esports.html" target="_blank" class="">esports</a>
+							<ul>
+								<li>
+									<a href="./esports_list.html" target="_blank" class="">esports - list</a>
+									<ul>
+									<li><button class="pop-modal" onclick="modalOpen('sport_result-modal')">모바일 result 모달</button></li>
+									</ul>
+								</li>
+								<li><a href="./esports_detail.html" target="_blank" class="">esports - detail</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="TV Games">
+					<ul>
+						<li><a href="./tvgame.html" target="_blank" class="">TV Games</a></li>
+						<li><a href="./tvgame_tournament.html" target="_blank" class="">tournaments</a></li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Games">
+					<ul>
+						<li><a href="./game.html" target="_blank" class="">Games</a></li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Virtual Games">
+					<ul>
+						<li><a href="./virtual_game.html" target="_blank" class="">Virtual Games</a></li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Promotions">
+					<ul>
+						<li>
+							<a href="./promotion.html" target="_blank" class="">Promotion</a>
+							<ul>
+								<li><button class="pop-modal" onclick="modalOpen('promotion_detail-modal')">promotion - detail 모달</button></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="mt10" data-label="Aviatrix">
+					<ul>
+						<li><a href="./aviatrix.html" target="_blank" class="">Aviatrix</a></li>
+					</ul>
+				</li>
+            </ul>
+        </li>
+	</ul>
+</div>
+
+<!-- 모달 -->
+<div id="wrap"></div>
+
+
+
+<script src='https://design01.codeidea.io/link_script.js'></script>
+<script src="./dist/js/app.js"></script>
+<script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/jquery-ui.js"></script>
+<script src="./dist/js/swiper-bundle.min.js"></script>
+<script src="./dist/js/custom.js"></script>
+
+
+</body>
+
+</html>

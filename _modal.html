@@ -1,0 +1,1343 @@
+
+
+<!-- 카지노 리스트 모달 -->
+<div id="casino_list-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-body !p-0">
+                <button class="close_btn fixed" onclick="modalClose('casino_list-modal')"><i class="bc-i-close-remove"></i></button>
+                <div class="z-10 sticky top-0 flex items-center justify-between pt-10 px-3 pb-3 border-b border-white border-opacity-10 bg-bg">
+                    <div class="custom_select w-auto">
+                        <button class="w-full py-2 px-3 pr-10 bg-white bg-opacity-10 rounded text-left"><p>Casino</p> <i class="arrow bc-i-small-arrow-down !fs10"></i></button>
+                        <div class="bg-bg !w-32 p-3 shadow-2">
+                            <ul>
+                                <li class="px-3 h-8 text-xs !font-normal rounded"><p>Casino</p></li>
+                                <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Live Casino</p></li>
+                                <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Games</p></li>
+                                <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>TV Games</p></li>
+                                <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Virtual</p></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 검색 -->
+                    <div class="relative w-80 mo_search text-right">
+                        <button class="h-10 px-3 bg-darky rounded" onclick="gameMoSearch(this)"><i class="bc-i-search"></i></button>
+                        <input type="text" class="form-control line-type h-10 pr-9" placeholder="Search casino game">
+                    </div>
+
+                </div>
+                <div class="p-3">
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-3">
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_1.gif" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_2.webp" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_4.gif" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_5.webp" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden casino_item rounded">
+                            <a href="javascript:;"><img src="./dist/images/casino/casino_6.gif" alt=""></a>
+                            <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                                <div class="flex items-center justify-between w-full text-xs md:text-base">
+                                    <button class="bc-i-favorite"></button>
+                                    <button class="bc-i-info"></button>
+                                </div>
+                                <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                                <div class="btn_box flex items-center justify-center gap-2">
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                                    <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 프로모션 상세  -->
+<div id="promotion_detail-modal" class="modal mo_full" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-2xl">
+        <div class="modal-content">
+            <div class="modal-body inner_scroll !p-0">
+                <div class="p-2 bg-bg">
+                    <button class="close_btn md:block hidden fixed" onclick="modalClose('promotion_detail-modal')"><i class="bc-i-close-remove"></i></button>
+                    <div class="flex items-center gap-2">
+                        <button class="md:hidden block text-xl opacity-80" onclick="modalClose('promotion_detail-modal')"><i class="bc-i-round-arrow-left"></i></button>
+                        <h3 class="font-bold text-base">WONDER WHEEL</h3>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-4 p-0 md:p-4">
+                    
+                    <div class="z-10 relative md:w-[400px] shrink-0">
+                        <div class="">
+                            <img class="rounded w-full" src="./dist/images/promotion/promotion_6.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="flex-grow inner_height md:p-0 p-2">
+                        <div class="mb-10">
+                            <strong>Your favourite time of the month is here at VBET - time to get LUCKY. </strong><br/><br/><br/>
+                            <strong>Wonder Wheel came with chances to win amazing prizes. We drop cash, free spins, bonuses, and, in addition, more than 6,000 NFTs of ORTAK category games which will be credited in bonuses. </strong><br/><br/>
+                            <strong>Also, you have a chance to get daily EXTRA spins in Wonder Wheel.</strong><br/><br/><br/><br/>
+                            <strong>- daily 2 extra spins on Boosted Games </strong><a href="javascript:;"><strong>(Vbet21 slot)</strong></a><br/><br/>
+                            <strong>- daily 1 extra spin on Boosted Live Games </strong><a href="javascript:;"><strong>(Vbet Roulette)</strong></a><br/><br/><br/>
+                            <strong>The Wonder Wheel is full of lucky chances - don’t miss out!</strong><br/><br/><br/>
+                            <a href="javascript:;"><img class="w-56" src="./dist/images/promotion/btn.png" alt=""></a>
+                        </div>
+
+                        <div class="faq_area">
+                            <dl class="border-t border-b border-white border-opacity-10">
+                                <dt class="flex items-center gap-2 text-base py-2.5 font-medium" onclick="faqToggle(this)"><i class="bc-i-small-arrow-down text-xs"></i>Prizes</dt>
+                                <dd class="pb-2.5">
+                                    <table class="table table-sm border-separate border-spacing-0.5 border-none text-white">
+                                        <thead>
+                                            <tr>
+                                                <th class="whitespace-nowrap">Wonder Wheel prizes</th>
+                                                <th class="whitespace-nowrap">Royal Wheel prizes</th>
+                                                <th class="whitespace-nowrap">VIP Wheel prizes</th>
+                                                <th class="whitespace-nowrap">Super Spin prizes</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2 Free Spins (1 FS - 20 AMD)</td>
+                                                <td>2,000 AMD Bonus</td>
+                                                <td>40 Free Spins (1 FS - 150 AMD)</td>
+                                                <td>1,500,000 AMD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5 Free Spins (1 FS - 20 AMD)</td>
+                                                <td>3,000 AMD</td>
+                                                <td>50 Free Spins (1 FS - 100 AMD)</td>
+                                                <td>300,000 AMD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7 Free Spins (1 FS - 20 AMD)</td>
+                                                <td><b>GAME NFT</b></td>
+                                                <td>60 Free Spins (1 FS - 100 AMD)</td>
+                                                <td><b>GAME NFT</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>10 Free Spins (1 FS - ՝20 AMD)</td>
+                                                <td><b>GAME NFT(10 symbols)</b></td>
+                                                <td>100,000 AMD Buy Bonus</td>
+                                                <td><b>GAME NFT</b></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </dd>
+                            </dl>
+                            <dl class="border-t border-b border-white border-opacity-10">
+                                <dt class="flex items-center gap-2 text-base py-2.5 font-medium" onclick="faqToggle(this)"><i class="bc-i-small-arrow-down text-xs"></i>How to collect spins?</dt>
+                                <dd class="pb-2.5">
+                                    <strong>Wonder Wheel</strong>
+                                    <ul class="list-disc pl-5 my-2 text-white text-opacity-50">
+                                        <li>Place a minimum of 100 AMD bet on each of “<b>Daily Games</b>” and get 2 <b>Wonder Wheel</b> spins daily.</li>
+                                        <li class="mt-1">Deposit a minimum of <b>1,000 AMD</b> and get <b>3 Wonder Wheel spins</b>. The chance is available once daily.</li>
+                                        <li class="mt-1">You will get 1 Wonder Wheel spin once daily for a total of 5,000 AMD bet on PopOK Gaming slots.<br/>*The scale can be completed only once daily.</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:absolute left-0 bottom-0 md:w-[400px] p-4 text-xs font-medium uppercase md:text-left text-center">21+  Warning: taking part in the game involves the risk of material damages. Playing in a non-sober state or in a state of emotional disturbance is not permissible.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- calculator -->
+<div class="draggable_modal w-72 p-2.5 transition-all bg-bg shadow-md rounded">
+    <div class="draggable_modal_header flex items-center justify-between relative p-3 bg-white bg-opacity-10 rounded-t">
+        <p class="font-medium text-xs">System Calculator</p>
+        <button class="draggable_modal_close"><i class="bc-i-close-remove text-xs"></i></button>
+    </div>
+    <div class="p-3 bg-white bg-opacity-15">
+        <div class="grid grid-cols-2 gap-3">
+
+            <div class="custom_select">
+                <button class="flex items-center justify-between gap-2 w-full py-2 px-3 bg-white bg-opacity-10 rounded">
+                    <p>2 / 3</p> <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
+                </button>
+                <div class="max-h-60 bg-bg shadow-2">
+                    <ul class="p-2">
+                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>2 / 3</p></li>
+                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>2 / 4</p></li>
+                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>3 / 4</p></li>
+                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>2 / 5</p></li>
+                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>3 / 5</p></li>
+                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>4 / 5</p></li>
+                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>2 / 6</p></li>
+                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>1 / 7</p></li>
+                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>2 / 7</p></li>
+                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>3 / 7</p></li>
+                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>4 / 7</p></li>
+                        <li class="w-full mb-0.5 p-2 rounded text-xs"><p>5 / 7</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="relative">
+                <span class="absolute left-4 -top-2 px-2 text-xs bg-[#263045] text-white text-opacity-60">Amount</span>
+                <input type="text" class="form-control line-type !border-white !border-opacity-30" placeholder="">
+            </div>
+
+        </div>
+        <table class="w-full mt-5">
+            <colgroup>
+                <col width="16%">
+                <col width="16%">
+                <col width="16%">
+                <col width="16%">
+                <col width="16%">
+                <col width="16%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="3"></th>
+                    <th><i class="bc-i-checked"></i></th>
+                    <th><i class="bc-i-close-remove"></i></th>
+                    <th><i class="bc-i-returned1"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center font-bold">1</td>
+                    <td colspan="2"><input type="text" class="form-control h-7" value="1"></td>
+                    <td class="text-center"><input id="cal_check_1_1" class="form-check-input" type="radio" name="cal_check_1" value="vertical-radio-chris-evans" checked> </td>
+                    <td class="text-center"><input id="cal_check_1_1" class="form-check-input" type="radio" name="cal_check_1" value="vertical-radio-chris-evans"> </td>
+                    <td class="text-center"><input id="cal_check_1_1" class="form-check-input" type="radio" name="cal_check_1" value="vertical-radio-chris-evans"> </td>
+                </tr>
+                <tr>
+                    <td class="text-center font-bold">2</td>
+                    <td colspan="2"><input type="text" class="form-control h-7" value="1"></td>
+                    <td class="text-center"><input id="cal_check_2_1" class="form-check-input" type="radio" name="cal_check_2" value="vertical-radio-chris-evans" checked> </td>
+                    <td class="text-center"><input id="cal_check_2_1" class="form-check-input" type="radio" name="cal_check_2" value="vertical-radio-chris-evans"> </td>
+                    <td class="text-center"><input id="cal_check_2_1" class="form-check-input" type="radio" name="cal_check_2" value="vertical-radio-chris-evans"> </td>
+                </tr>
+                <tr>
+                    <td class="text-center font-bold">3</td>
+                    <td colspan="2"><input type="text" class="form-control h-7" value="1"></td>
+                    <td class="text-center"><input id="cal_check_3_1" class="form-check-input" type="radio" name="cal_check_3" value="vertical-radio-chris-evans" checked> </td>
+                    <td class="text-center"><input id="cal_check_3_1" class="form-check-input" type="radio" name="cal_check_3" value="vertical-radio-chris-evans"> </td>
+                    <td class="text-center"><input id="cal_check_3_1" class="form-check-input" type="radio" name="cal_check_3" value="vertical-radio-chris-evans"> </td>
+                </tr>
+            </tbody>
+
+        </table>
+        <div class="grid grid-cols-6">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="my-4 text-xs font-bold">
+            <div class="flex items-center justify-between">
+                <p>Combinations</p>
+                <p>3</p>
+            </div>
+            <div class="flex items-center justify-between">
+                <p>Stake Per Combinations</p>
+                <p>0.0</p>
+            </div>
+            <div class="flex items-center justify-between">
+                <p>Winnings</p>
+                <p>0.0</p>
+            </div>
+        </div>
+        <div>
+            <button class="btn w-full bg-white bg-opacity-0 hover:!bg-opacity-20">RESET</button>
+        </div>
+    </div>
+</div>
+
+<!-- wonder wheel mobile modal - result -->
+<div id="wheel_promo_result-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-4 rounded-2xl border border-light2-opacity bg-dark-primary shadow-3">
+                <button class="close_btn fixed" onclick="modalClose('wheel_promo_result-modal')"><i class="bc-i-close-remove text-primary text-lg"></i></button>
+                
+                <div class="mb-5 text-center font-medium text-base">Promo Results</div>
+                <div class="mb-3">         
+                    <div class="form-check form-switch promo-switch"> <input id="promo_check" class="form-check-input" type="checkbox"> </div>
+                </div>
+                <div class="overflow-y-auto primaryscrollbar pr-2">
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-3 pb-1 border-b border-dark2 text-base">
+                        <p>10 FREE SPINS</p>
+                        <p class="fs13 text-white text-opacity-50">1079721817</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- wonder wheel ticket modal -->
+<div id="wheel_promo_ticket-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content !bg-transparent">
+            <div class="modal-body flex flex-col gap-5 fix_height !p-0">
+                <button class="close_btn fixed" onclick="modalClose('wheel_promo_ticket-modal')"><i class="bc-i-close-remove text-primary text-lg"></i></button>
+                
+                <ul class="nav nav-boxed-tabs bg_none_type overflow-hidden w-4/5 mx-auto !rounded-3xl border border-light2-opacity bg-dark-primary" role="tablist">
+                    <li id="wheel_ticket-3-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full h-14 py-2 !rounded-3xl active" data-tw-toggle="pill" data-tw-target="#wheel_ticket-tab-3" type="button" role="tab" aria-controls="wheel_ticket-tab-3" aria-selected="true"> MY TICKETS </button> 
+                    </li>
+                    <li id="wheel_ticket-4-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full h-14 py-2 !rounded-3xl" data-tw-toggle="pill" data-tw-target="#wheel_ticket-tab-4" type="button" role="tab" aria-controls="wheel_ticket-tab-4" aria-selected="false"> PROMO RESULTS </button> 
+                    </li>
+                </ul>
+                <div class="flex-1 tab-content">
+                    <div id="wheel_ticket-tab-3" class="tab-pane leading-relaxed h-full active" role="tabpanel" aria-labelledby="wheel_ticket-3-tab"> 
+                        <div class="flex flex-col items-center justify-around h-full rounded-3xl border border-light2-opacity bg-dark-primary shadow-3">
+                            <img class="w-2/5" src="./dist/images/wonderwheel/tickets.png" alt="">
+                            <input type="text" class="form-control !w-4/5" placeholder="Search">
+                            <div></div>
+                            <div class="text-center">
+                                <p class="fs10">No Available Tickets</p>
+                                <p class="text-base text-white text-opacity-50">There is no data to show.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="wheel_ticket-tab-4" class="tab-pane leading-relaxed h-full" role="tabpanel" aria-labelledby="wheel_ticket-4-tab"> 
+                        <div class="flex flex-col items-center justify-around h-full rounded-3xl border border-light2-opacity bg-dark-primary shadow-3">
+                            <p class="text-center text-white text-opacity-50">No History Yet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Result modal -->
+<div id="sport_result-modal" class="modal mo_full" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body border-t border-white border-opacity-5 p-2">
+                <div class="flex items-center gap-2 font-medium pb-3" onclick="modalClose('sport_result-modal')">
+                    <i class="bc-i-round-arrow-left text-xl"></i>
+                    FOOTBALL
+                </div>
+
+                <div class="mb-5 bg-black p-2.5 rounded">
+                    <div class="flex items-center justify-between text-base">
+                        <p>Into the Breach</p>
+                        <b>2</b>
+                    </div>
+                    <div class="flex items-center justify-between text-base">
+                        <p>Jognny Speeds</p>
+                        <b>2</b>
+                    </div>
+                    <div class="fs10 text-white text-opacity-80">2:1 (10:13, 13:11, 13:9)</div>
+                </div>
+
+                <div class="game_fold overflow-hidden rounded mb-2">
+                    <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15" onclick="faqToggle(this)">
+                        <p class="flex items-center gap-2 text-xs">Match Winner</p>
+                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                    </button>
+                    <div class="overflow-hidden cursor-pointer text-xs">
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">W1</button>
+                    </div>
+                </div>
+                <div class="game_fold overflow-hidden rounded mb-2">
+                    <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15" onclick="faqToggle(this)">
+                        <p class="flex items-center gap-2 text-xs">Maps Handicap</p>
+                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                    </button>
+                    <div class="overflow-hidden cursor-pointer text-xs">
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Into the Breach(1.5)</button>
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Into the Breach(0.5)</button>
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Into the Breach(-0.5)</button>
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(1.5)</button>
+                    </div>
+                </div>
+                <div class="game_fold overflow-hidden rounded mb-2">
+                    <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15" onclick="faqToggle(this)">
+                        <p class="flex items-center gap-2 text-xs">Maps Total</p>
+                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                    </button>
+                    <div class="overflow-hidden cursor-pointer text-xs">
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">W2</button>
+                    </div>
+                </div>
+                <div class="game_fold open overflow-hidden rounded mb-2">
+                    <button class="flex items-center justify-between w-full h-8.5 px-3 bg-white bg-opacity-15" onclick="faqToggle(this)">
+                        <p class="flex items-center gap-2 text-xs">Map 1 Rounds Handicap</p>
+                        <i class="arrow icon flex items-center justify-center w-6 h-6 rounded bc-i-small-arrow-down text-xs !text-white"></i>
+                    </button>
+                    <div class="overflow-hidden cursor-pointer text-xs">
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Into the Breach(5.5)</button>
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Into the Breach(4.5)</button>
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Into the Breach(3.5)</button>
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(-2.5)</button>
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(2.5)</button>
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(3.5)</button>
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(4.5)</button>
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(5.5)</button>
+                        <button class="w-full h-8.5 px-2.5 mt-[1px] bg-white bg-opacity-5 text-white text-opacity-50 text-left">Jognny Speeds(6.5)</button>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Golden age 모달 -->
+<div id="golden_age-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body px-4 md:px-2">
+                <button class="close_btn" onclick="modalClose('golden_age-modal')"><i class="bc-i-close-remove"></i></button>
+                <div class="pt-5 pb-2 text-center text-base font-medium">GOLDEN AGE</div>
+                <a href="javascript:;" class="block px-2"><img src="./dist/images/banner/golden_age.jpg" alt=""></a>
+                <div class="p-2"><button class="btn btn-success w-full">CLOSE</button></div>
+                <div class="form-check p-2"> 
+                    <input id="golden_age-1" class="form-check-input" type="checkbox" value=""> 
+                    <label class="form-check-label" for="golden_age-1">Don't show again</label> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SIGN IN 모달 -->
+<div id="sign_in-modal" class="modal mo_allfull" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body flex flex-col justify-between fix_height !p-0">
+                <div class="flex items-center justify-between h-12 px-3 border-b border-white border-opacity-5">
+                    <img class="h-8 md:h-10" src="./dist/images/common/logo.svg" alt="">
+                    <button class="btn btn-primary h-7 px-1.5 mr-10 text-xs" onclick="modalClose('sign_in-modal'); modalOpen('register-modal')">REGISTER</button>
+                    <button class="close_btn" onclick="modalClose('sign_in-modal')"><i class="bc-i-close-remove opacity-80"></i></button>
+                </div>
+                <div class="flex-1 p-4">
+                    <div class="mb-2.5 font-medium text-white text-opacity-50 leading-none">Already have an account?</div>
+                    <div class="text-lg font-medium uppercase leading-none">Sign in, we are waiting for you</div>
+
+                    <div class="input_wrap mt-3"> 
+                        <input id="login-email" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                        <label for="login-email" class="form-label text-xs text-white text-opacity-40">Email / Username</label> 
+                    </div> 
+                    <div class="input_wrap mt-3"> 
+                        <input id="login-password" type="passsword" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                        <label for="login-password" class="form-label text-xs text-white text-opacity-40">Password</label> 
+                        <button class="password_btn bc-i-eye-hidden text-xl text-white text-opacity-80" onclick="passwordChange(this)"></button>
+                    </div> 
+                    <div class="input_wrap error mt-3"> 
+                        <input id="login-password2" type="passsword" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                        <label for="login-password2" class="form-label text-xs text-white text-opacity-40">Password</label> 
+                        <button class="password_btn bc-i-eye-hidden text-xl text-white text-opacity-80" onclick="passwordChange(this)"></button>
+                    </div> 
+                    <div class="mt-1 p-1.5 bg-danger bg-opacity-20 text-xs rounded">This field is required</div>
+                    <div class="form-check py-4"> 
+                        <input id="sign_remember-1" class="form-check-input" type="checkbox" value=""> 
+                        <label class="form-check-label" for="sign_remember-1">Remember me</label> 
+                    </div>
+                    <button class="btn btn-success w-full">SIGN IN</button>
+                    <div class="py-7 text-center">
+                        <button class="uppercase font-medium text-white text-opacity-70" onclick="modalClose('sign_in-modal'); modalOpen('reset_password-modal')">forgot your password?</button>
+                    </div>
+                </div>
+                <div class="py-4">
+                    <button class="flex items-center justify-center gap-1 w-full text-white text-opacity-50"><i class="bc-i-live-chat"></i><span class="underline">Contact support</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- reset password 모달 -->
+<div id="reset_password-modal" class="modal mo_allfull" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body fix_height !p-0">
+                <div class="flex items-center justify-between h-12 px-3 border-b border-white border-opacity-5">
+                    <img class="h-8 md:h-10" src="./dist/images/common/logo.svg" alt="">
+                    <button class="underline text-white text-opacity-80 mr-10"  onclick="modalClose('reset_password-modal'); modalOpen('sign_in-modal')">SIGN IN</button>
+                    <button class="close_btn" onclick="modalClose('reset_password-modal')"><i class="bc-i-close-remove opacity-80"></i></button>
+                </div>
+                <div class="p-4">
+                    <div class="mb-4 text-lg font-medium uppercase leading-none">reset password</div>
+
+                    <div class="form-check mt-3"> 
+                        <input id="reset_password-1" class="form-check-input" type="radio" name="vertical_radio_button" value="vertical-radio-chris-evans"> 
+                        <label class="form-check-label" for="reset_password-1">SMS</label> 
+                    </div>
+                    <div class="form-check mt-3"> 
+                        <input id="reset_password-2" class="form-check-input" type="radio" name="vertical_radio_button" value="vertical-radio-liam-neeson"> 
+                        <label class="form-check-label" for="reset_password-2">E-mail</label> 
+                    </div>
+                    <div class="input_wrap mt-5"> 
+                        <input id="reset-phone" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                        <label for="reset-phone" class="form-label text-xs text-white text-opacity-40">Enter phone number</label> 
+                    </div> 
+                    <button class="btn btn-success w-full my-4">RESET</button>
+                    <div class="flex items-start gap-1 text-xs text-white text-opacity-60">
+                        <i class="bc-i-player-info mt-0.5"></i>
+                        Enter your e-mail address or phone number and click the "RESET" button.
+                    </div>
+     
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- register 모달 -->
+<div id="register-modal" class="modal mo_allfull" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-2lg">
+        <div class="modal-content">
+            <div class="modal-body flex flex-col justify-between fix_height !p-0">
+                <div class="flex items-center justify-between shrink-0 h-12 px-3 border-b border-white border-opacity-5">
+                    <img class="h-8 md:h-10" src="./dist/images/common/logo.svg" alt="">
+                    <button class="underline text-white text-opacity-80 mr-10"  onclick="modalClose('register-modal'); modalOpen('sign_in-modal')">SIGN IN</button>
+                    <button class="close_btn" onclick="modalClose('register-modal')"><i class="bc-i-close-remove opacity-80"></i></button>
+                </div>
+                <div class="flex-1 grid-cols-1 grid md:grid-cols-2 gap-3 p-4">
+                    <div class="md:block hidden">
+                        <div class="mySwiper overflow-hidden relative h-full">
+                            <div class="swiper-container h-full">
+                                <ul class="swiper-wrapper h-full">
+                                    <li class="swiper-slide h-full"><a href="javascript:;" class="block w-full h-full"><img class="w-full h-full object-fill" src="./dist/images/banner/regi_1.webp" alt=""></a></li>
+                                    <li class="swiper-slide h-full"><a href="javascript:;" class="block w-full h-full"><img class="w-full h-full object-fill" src="./dist/images/banner/regi_2.webp" alt=""></a></li>
+                                </ul>
+                            </div>
+                            <div class="z-10 absolute right-3 top-3 flex items-center">
+                                <div class="pagination fraction flex items-center justify-center px-3 py-1 bg-primary text-center text-xs rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-2.5 font-medium text-white text-opacity-50 leading-none">New member?</div>
+                        <div class="text-lg font-medium uppercase leading-none">register now,it's easy!</div>
+
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-email" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-email" class="form-label text-xs text-white text-opacity-40">E-mail</label> 
+                        </div> 
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-password" type="password" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-password" class="form-label text-xs text-white text-opacity-40">Password</label> 
+                            <button class="password_btn bc-i-eye-hidden text-xl text-white text-opacity-80" onclick="passwordChange(this)"></button>
+                        </div>
+
+                        <div class="input_wrap error mt-3"> 
+                            <input id="register-password" type="password" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-password" class="form-label text-xs text-white text-opacity-40">Password</label> 
+                            <button class="password_btn bc-i-eye-hidden text-xl text-white text-opacity-80" onclick="passwordChange(this)"></button>
+                        </div>
+                        <div class="p-4 text-xs text-white text-opacity-90 bg-white bg-opacity-10 rounded">
+                            <div class="mb-4 font-bold">Password strength - middle. </div>
+                            <div class="flex gap-1 mb-4">
+                                <span class="w-9 h-0.5 bg-success rounded"></span>
+                                <span class="w-9 h-0.5 bg-success rounded"></span>
+                                <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
+                                <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
+                                <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
+                                <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
+                                <span class="w-9 h-0.5 bg-white bg-opacity-30 rounded"></span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3 bc-i-checked text-success"></i>
+                                <span>This field is required</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
+                                <span>Password must contain at least one digit.</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
+                                <span>Password cannot contain spaces.</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
+                                <span>Password must contain lowercase and uppercase letters.</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
+                                <span>Password should contain English alphabet characters (A-Z).</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
+                                <span>Too short password .</span>
+                            </div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="flex items-center justify-center w-3 h-3"><span class="w-1.5 h-1.5 bg-white bg-opacity-30 rounded-full"></span></i>
+                                <span>Too long password.</span>
+                            </div>
+                        </div>
+
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-password2" type="text" class="form-control w-full"> 
+                            <label for="register-password2" class="form-label text-xs text-white text-opacity-40">Repeat Password</label> 
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="z-10 sticky bottom-0 bg-[#0c182f]">
+                    <div class="py-5 px-3">
+                        <button class="btn btn-success w-full" onclick="modalClose('register-modal'); modalOpen('register2-modal')">NEXT</button>
+                    </div>
+                    <div class="w-full h-[3px] bg-white bg-opacity-10"><span class="block w-1/2 h-full bg-white bg-opacity-70"></span></div>
+                    <div class="py-4">
+                        <button class="flex items-center justify-center gap-1 w-full text-white text-opacity-50"><i class="bc-i-live-chat"></i><span class="underline">Contact support</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- register step2 모달 -->
+<div id="register2-modal" class="modal mo_allfull" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-2lg">
+        <div class="modal-content">
+            <div class="modal-body flex flex-col justify-between fix_height !p-0">
+                <div class="flex items-center justify-between shrink-0 h-12 px-3 border-b border-white border-opacity-5">
+                    <img class="h-8 md:h-10" src="./dist/images/common/logo.svg" alt="">
+                    <button class="underline text-white text-opacity-80 mr-10"  onclick="modalClose('register2-modal'); modalOpen('sign_in-modal')">SIGN IN</button>
+                    <button class="close_btn" onclick="modalClose('register2-modal')"><i class="bc-i-close-remove opacity-80"></i></button>
+                </div>
+                <div class="flex-1 grid-cols-1 grid md:grid-cols-2 gap-3 p-4">
+                    <div class="md:block hidden">
+                        <div class="mySwiper overflow-hidden relative h-full">
+                            <div class="swiper-container h-full">
+                                <ul class="swiper-wrapper h-full">
+                                    <li class="swiper-slide h-full"><a href="javascript:;" class="block w-full h-full"><img class="w-full h-full object-fill" src="./dist/images/banner/regi_1.webp" alt=""></a></li>
+                                    <li class="swiper-slide h-full"><a href="javascript:;" class="block w-full h-full"><img class="w-full h-full object-fill" src="./dist/images/banner/regi_2.webp" alt=""></a></li>
+                                </ul>
+                            </div>
+                            <div class="z-10 absolute right-3 top-3 flex items-center">
+                                <div class="pagination fraction flex items-center justify-center px-3 py-1 bg-primary text-center text-xs rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-2.5 font-medium text-white text-opacity-50 leading-none">New member?</div>
+                        <div class="mb-3 text-lg font-medium uppercase leading-none">register now,it's easy!</div>
+                        <div class="text-base font-medium uppercase leading-none">registeration step 2</div>
+
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-name" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-name" class="form-label text-xs text-white text-opacity-40">First name</label> 
+                        </div> 
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-lname" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-lname" class="form-label text-xs text-white text-opacity-40">Last name</label> 
+                        </div> 
+                        <div class="relative mt-3 h-[52px]">
+                            <label class="absolute top-2 left-4 text-xs opacity-50" for="calendar_1">Birth date</label>
+                            <div class="absolute right-0 w-10 h-full flex items-center justify-center "> 
+                                <i class="w-5 h-5 bc-i-datepicker"></i>
+                            </div>
+                            <input type="text" class="datepicker form-control h-full !bg-white !bg-opacity-15 pt-6 pl-4 pr-12" id="calendar_1" data-single-mode="true" value=" ">
+                        </div>
+                        <div class="custom_select w-full mt-3">
+                            <button class="w-full py-2 px-4 bg-white bg-opacity-15 rounded text-left">
+                                <span class="text-xs opacity-40">Gender</span>
+                                <p>Choose gender</p> 
+                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                            </button>
+                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                <ul>
+                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p>Male</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>Female</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-passport" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-passport" class="form-label text-xs text-white text-opacity-40">Passport / ID</label> 
+                        </div> 
+                        <div class="custom_select mt-3">
+                            <button class="w-full py-1.5 px-4 bg-white bg-opacity-15 rounded text-left">
+                                <span class="text-xs opacity-40">Country</span>
+                                <p class="flex items-center gap-2"><i class="flag-bc southkorea"></i> South Korea</p> 
+                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                            </button>
+                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                <div class="relative mb-1">
+                                    <input type="text" class="form-control w-full pr-12 !bg-white !bg-opacity-15" placeholder="Search Country"> 
+                                    <i class="bc-i-search absolute right-0 top-0 flex items-center justify-center w-9 h-9"></i>
+                                </div>
+                                <ul>
+                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc aland"></i> Aland Islands</p> </li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc albania"></i> Albania</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc aLgeria"></i> ALgeria</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc americansamoa"></i> American Samoa</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc andorra"></i> Andorra</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc angola"></i> Angola</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc anguilla"></i> Anguilla</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc southkorea"></i> South Korea</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="custom_select w-full mt-3">
+                            <button class="w-full py-2 px-4 bg-white bg-opacity-15 rounded text-left">
+                                <span class="text-xs opacity-40">Currency</span>
+                                <p>AMD</p> 
+                                <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                            </button>
+                            <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                <ul>
+                                    <li class="px-3 h-8 text-xs !font-normal rounded"><p>AMD</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>EUR</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>GEL</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>KZT</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>USD</p></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-center gap-2 mt-3">
+                            <div class="!static custom_select w-24">
+                                <button class="w-full py-1.5 px-4 bg-white bg-opacity-15 rounded text-left">
+                                    <span class="text-xs opacity-40">Code</span>
+                                    <p class="flex items-center gap-2"><i class="flag-bc southkorea"></i> 82</p> 
+                                    <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                                </button>
+                                <div class="!top-full bg-bg w-full p-3 shadow-2">
+                                    <div class="relative mb-1">
+                                        <input type="text" class="form-control w-full pr-12 !bg-white !bg-opacity-15" placeholder="Search Country"> 
+                                        <i class="bc-i-search absolute right-0 top-0 flex items-center justify-center w-9 h-9"></i>
+                                    </div>
+                                    <ul>
+                                        <li class="px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc aland"></i> 358</p> </li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc albania"></i> 355</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc aLgeria"></i> 211</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc americansamoa"></i> 1654</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc andorra"></i> 376</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc angola"></i> 244</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc anguilla"></i> 672</p></li>
+                                    <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc southkorea"></i> 82</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex-1 input_wrap"> 
+                                <input id="register-phone" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                                <label for="register-phone" class="form-label text-xs text-white text-opacity-40">Phone number</label> 
+                            </div> 
+                        </div>
+
+                        <div class="input_wrap mt-3"> 
+                            <input id="register-promo" type="text" class="form-control w-full" oninput="inputChange(this)" onchange="inputChange(this)"> 
+                            <label for="register-promo" class="form-label text-xs text-white text-opacity-40">Promo code</label> 
+                        </div> 
+
+                        <div class="form-check mt-3"> 
+                            <input id="register_policy-1" class="form-check-input" type="checkbox" value=""> 
+                            <label class="form-check-label" for="register_policy-1">I am over 21 years of age and have accepted the <a href="javascript:;" class="underline">Privacy Policy</a>. and the <a href="javascript:;" class="underline">General Terms & Conditions</a></label> 
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="z-10 sticky bottom-0 bg-[#0c182f]">
+                    <div class="grid grid-cols-2 gap-3 py-5 px-3">
+                        <button class="btn btn-success w-full" onclick="modalClose('register2-modal'); modalOpen('register-modal')">BACK</button>
+                        <button class="btn btn-success w-full" onclick="modalClose('register2-modal')">REGISTER</button>
+                    </div>
+                    <div class="flex items-center justify-end w-full h-[3px] bg-white bg-opacity-10"><span class="block w-1/2 h-full bg-white bg-opacity-70"></span></div>
+                    <div class="py-4">
+                        <button class="flex items-center justify-center gap-1 w-full text-white text-opacity-50"><i class="bc-i-live-chat"></i><span class="underline">Contact support</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Low balance 모달 -->
+<div id="low_balance-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body p-4">
+                <button class="close_btn" onclick="modalClose('low_balance-modal')"><i class="bc-i-close-remove"></i></button>
+                <div class="pt-5 pb-2 text-center text-base font-medium">LOW BALANCE</div>
+                <div class="p-3 bg-white bg-opacity-5 rounded">
+                    <button class="btn btn-success w-full">DEPOSIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- upload success 모달 -->
+<div id="success-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body p-4">
+                <button class="close_btn" onclick="modalClose('success-modal')"><i class="bc-i-close-remove"></i></button>
+                <div class="pt-3">
+                    <svg class="mx-auto" width="57px" height="57px" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>check_circle_outline-24px</title><g id="Balance-Management" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Balance-Management-I-Buddy-to-Buddy-|-Success-Pop-up" transform="translate(-691.000000, -344.000000)"><g id="check_circle_outline-24px" transform="translate(691.000000, 344.000000)"><polygon id="Path" points="0 0 57 0 57 57 0 57"></polygon><path d="M28.5,4.75 C15.39,4.75 4.75,15.39 4.75,28.5 C4.75,41.61 15.39,52.25 28.5,52.25 C41.61,52.25 52.25,41.61 52.25,28.5 C52.25,15.39 41.61,4.75 28.5,4.75 Z M28.5,47.5 C18.02625,47.5 9.5,38.97375 9.5,28.5 C9.5,18.02625 18.02625,9.5 28.5,9.5 C38.97375,9.5 47.5,18.02625 47.5,28.5 C47.5,38.97375 38.97375,47.5 28.5,47.5 Z M37.715,19.68875 L23.75,33.65375 L19.285,29.18875 C18.35875,28.2625 16.8625,28.2625 15.93625,29.18875 C15.01,30.115 15.01,31.61125 15.93625,32.5375 L22.0875,38.68875 C23.01375,39.615 24.51,39.615 25.43625,38.68875 L41.0875,23.0375 C42.01375,22.11125 42.01375,20.615 41.0875,19.68875 C40.16125,18.7625 38.64125,18.7625 37.715,19.68875 Z" id="Shape" fill="#16C72E"></path></g></g></g></svg>
+                </div>
+                <div class="pt-5 text-center text-base font-medium">SUCCESS</div>
+                <div class="mt-5 mb-7 text-center text-base text-white text-opacity-70">Your file was successfully uploaded</div>
+                <button class="w-full py-2 bg-white bg-opacity-15 rounded">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모바일 - betslip -->
+<div id="betslip-modal" class="modal mo_allfull" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body flex flex-col justify-between !p-0">
+                <div class="z-20 sticky top-0 flex items-center justify-between shrink-0 h-12 px-3 border-b border-white border-opacity-5 bg-bg">
+                    <div class="text-xs font-medium">0.0֏</div>
+                    <button class="close_btn" onclick="modalClose('betslip-modal')"><i class="bc-i-close-remove opacity-80"></i></button>
+                </div>
+                <div class="relative flex-1 px-2">
+                    <!-- Betslip -->
+                    <ul class="z-10 sticky top-12 nav nav-boxed-tabs bg-bg" role="tablist">
+                        <li id="bets-1-tab" class="nav-item flex-1" role="presentation"> 
+                            <button class="nav-link w-full py-1.5 active" data-tw-toggle="pill" data-tw-target="#bets-tab-1" type="button" role="tab" aria-controls="bets-tab-1" aria-selected="true">BetSlip</button> 
+                        </li>
+                        <li id="bets-2-tab" class="nav-item flex-1" role="presentation"> 
+                            <button class="nav-link w-full py-1.5" data-tw-toggle="pill" data-tw-target="#bets-tab-2" type="button" role="tab" aria-controls="bets-tab-2" aria-selected="false">Open Bets</button> 
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="bets-tab-1" class="relative tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="bets-1-tab">
+                            <div class="z-10 sticky top-[82px] py-0.5 bg-bg">
+                                <div class="flex items-center justify-between h-9 pr-3 bg-white bg-opacity-5 rounded">
+                                    <div class="custom_select">
+                                        <button class="flex items-center justify-between gap-2 w-full py-2 px-3 rounded">
+                                            <i class="bc-i-settings text-base opacity-80"></i><p class="opacity-50">Always ask</p> <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
+                                        </button>
+                                        <div class="max-h-60 bg-bg shadow-2">
+                                            <ul class="p-2">
+                                                <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Always ask</p></li>
+                                                <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Accept Higher odds</p></li>
+                                                <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Accept Any odds</p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <button class="draggable_modal_open bc-i-calculate text-base opacity-80"></button>
+                                </div>
+                                <div class="flex items-center justify-between h-9 px-3 bg-white bg-opacity-10 rounded">
+                                    <div class="custom_select">
+                                        <button class="flex items-center justify-between gap-2 w-full py-2 px-3 rounded text-xs">
+                                            <p>Multiple</p> <i class="arrow noabsolute bc-i-small-arrow-down !text-xs"></i>
+                                        </button>
+                                        <div class="max-h-60 bg-bg shadow-2">
+                                            <ul class="p-2">
+                                                <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Single</p></li>
+                                                <li class="w-full mb-0.5 p-2 rounded text-xs"><p>Multiple</p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <button class="opacity-50 underline text-xs">Remove All</button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 gap-0.5 my-0.5">
+                                <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                    <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                    <div>
+                                        <div class="flex items-center justify-between opacity-50">
+                                            <p>Imperial e-Sports</p>
+                                            <p class="text-warning">1.0004</p>
+                                        </div>
+                                        <div class="flex items-start justify-between mt-1 opacity-30">
+                                            <p>Match Winner</p>
+                                            <p class="text-danger font-semibold line-through"></p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <p class="fs11 opacity-30">Imperial e-Sports - Sharks Esports</p>
+                                            <p><i class="bc-i-attention text-danger fs10"></i></p>
+                                        </div>
+                                        <div class="flex items-center justify-between opacity-10">
+                                            <p class="fs11">17.10.2024,07:00</p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 mt-2">
+                                        <i class="text-base text-danger bc-i-remove-circle"></i>
+                                        Event has been deleted
+                                    </div>
+                                </div>
+                                <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                    <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <p>Sharks Esports</p>
+                                            <p class="text-warning font-semibold">2.44</p>
+                                        </div>
+                                        <div class="flex items-start justify-between mt-1 opacity-70">
+                                            <p>Map 3 Winner</p>
+                                            <p class="text-danger font-semibold line-through"></p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <p class="fs11 opacity-70">Imperial e-Sports - Sharks Esports</p>
+                                            <p><i class="bc-i-attention text-danger fs10"></i></p>
+                                        </div>
+                                        <div class="flex items-center justify-between opacity-50">
+                                            <p class="fs11">17.10.2024,07:00</p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                    <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <p>Sharks Esports</p>
+                                            <p class="text-warning font-semibold">2.44</p>
+                                        </div>
+                                        <div class="flex items-start justify-between mt-1">
+                                            <p class="opacity-70">Map 3 Winner</p>
+                                            <p class="text-danger font-semibold line-through">1.29</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center justify-between opacity-70">
+                                            <p class="fs11">Imperial e-Sports - Sharks Esports</p>
+                                            <p></p>
+                                        </div>
+                                        <div class="flex items-center justify-between opacity-50">
+                                            <p class="fs11">17.10.2024,07:00</p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-2.5 bg-white bg-opacity-10 rounded text-xs">
+                                    <div class="text-right"><button class="bc-i-close-remove fs10 opacity-80"></button></div>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <p>Sharks Esports</p>
+                                            <p class="text-warning font-semibold">2.44</p>
+                                        </div>
+                                        <div class="flex items-start justify-between mt-1 opacity-70">
+                                            <p>Map 3 Winner</p>
+                                            <p class="text-danger font-semibold line-through"></p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center justify-between opacity-70">
+                                            <p class="fs11">Imperial e-Sports - Sharks Esports</p>
+                                            <p></p>
+                                        </div>
+                                        <div class="flex items-center justify-between opacity-50">
+                                            <p class="fs11">17.10.2024,07:00</p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="py-10 text-center opacity-80">
+                                Your betslip is empty
+                            </div>
+
+                            <div class="p-2">
+                                <div class="flex items-center justify-between text-xs">
+                                    <p>Odds</p>
+                                    <p class="text-warning font-semibold">2.649</p>
+                                </div>
+                                <div class="py-2">
+                                    <input type="text" class="form-control line-add" placeholder="Enter stake">
+                                </div>
+                                <div class="flex items-center justify-between text-xs">
+                                    <p>POssible win:</p>
+                                    <p class="text-success font-semibold">0 ֏</p>
+                                </div>
+                            </div>
+
+                            <div class="sticky bottom-0 bg-bg pb-2">
+                                <div class="flex items-center gap-2 fs11 py-2 px-2.5 my-0.5 bg-warning bg-opacity-20 rounded">
+                                    <i class="bc-i-attention text-base text-warning opacity-60"></i>
+                                    To place your bet, please <a href="javascript:;" class="underline">Sign in</a> or <a href="javascript:;" class="underline">Register</a>
+                                </div>
+                                <div class="flex items-center gap-2 fs11 py-2 px-2.5 my-0.5 bg-warning bg-opacity-20 rounded">
+                                    <i class="bc-i-attention text-base text-warning opacity-60"></i>
+                                    There are deleted events
+                                </div>
+                                <div class="mt-0.5 p-2.5 bg-white bg-opacity-10 rounded">
+                                    <button class="w-full h-9 bg-white bg-opacity-10 rounded">BET NOW</button>
+                                </div>
+                                <div class="betslip_hoory !h-28 mt-3 pt-2">
+                                    <p class="desc text-xs text-center text-white text-opacity-80">Meet Your Game-Changer</p>
+                                    <p class="tit my-1 text-center text-2xl font-bold">Betting Assistant</p>
+                                    <button><i class="bc-i-hoory mr-2"></i> Ask Hoory AI</button>
+                                    <img src="./dist/images/icon/hoory.png" alt="">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div id="bets-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="bets-2-tab">
+                            <div class="mt-2 text-right"><button class="underline text-white text-opacity-50">Go to bet history.</button></div>
+                            <div class="py-14 text-center">You have no open bets at the moment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 게임 모달 -->
+<div id="game-modal" class="modal mo_full" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-body flex flex-col justify-between !p-0">
+                <div class="z-30 sticky top-0 flex items-center justify-between shrink-0 h-12 px-3 bg-bg">
+                    <div class="flex items-center gap-2 text-base font-medium">
+                        <i class="bc-i-favorite" onclick="zzimToggle(this)"></i>
+                        First Ballon
+                    </div>
+                    <button class="close_btn" onclick="modalClose('game-modal')"><i class="bc-i-close-remove opacity-80"></i></button>
+                </div>
+                <div class="flex md:flex-row flex-col">
+                    <div class="flex-1 relative py-10 side-blur">
+                        <div class="absolute left-0 top-0 w-full h-full" style="z-index:5; background:url('./dist/images/casino/casino_bg.webp') no-repeat center center / cover;"></div>
+                        <div class="z-20 relative">
+                            <img class="w-56 mx-auto rounded" src="./dist/images/casino/casino_4.gif" alt="">
+                            <div class="text-center mt-2">
+                                <p class="font-medium text-2xl">Diamond Flash</p>
+                                <p class="text-white text-opacity-60">POPOK GAMING</p>
+                            </div>
+                            <div class="flex items-center justify-center gap-3 mt-5">
+                                <button class="btn btn-success py-2.5 px-5 text-xs">PLAY</button>
+                                <button class="btn border py-2.5 px-5 border-white text-xs">DEMO</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shrink-0 md:w-72 bg7-gradient">
+                        <ul class="overflow-hidden nav nav-link-tabs type03 rounded-t" role="tablist">
+                            <li id="casino_game-5-tab" class="nav-item flex-1" role="presentation"> 
+                                <button class="nav-link w-full py-2 text-xs active" data-tw-toggle="pill" data-tw-target="#casino_game-tab-5" type="button" role="tab" aria-controls="casino_game-tab-5" aria-selected="true">Jackpot</button> 
+                            </li>
+                            <li id="casino_game-6-tab" class="nav-item flex-1" role="presentation"> 
+                                <button class="nav-link w-full py-2 text-xs" data-tw-toggle="pill" data-tw-target="#casino_game-tab-6" type="button" role="tab" aria-controls="casino_game-tab-6" aria-selected="false">Tournaments</button> 
+                            </li>
+                        </ul>
+                        <div class="tab-content p-3">
+                            <div id="casino_game-tab-5" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="casino_game-5-tab">
+                                <div class="mb-2 text-xs text-white text-opacity-60">BETCONSTRUCT JACKPOT</div>
+                                <div class="flex items-center justify-between w-full mb-1 py-2 px-4 bg-white bg-opacity-5 rounded">
+                                    <img class="w-10 h-10 object-contain" src="./dist/images/casino/casino_icon_4.png" alt="">
+                                    <div class="text-right text-xs font-medium">
+                                        <span class="text-warning">MEGA</span>
+                                        <p class="mt-2">376,297,998.9֏</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between w-full mb-1 py-3 px-4 bg-white bg-opacity-5 rounded">
+                                    <img class="w-10 h-9 object-contain" src="./dist/images/casino/casino_icon_1.png" alt="">
+                                    <div class="text-right text-xs font-medium">
+                                        <span class="text-warning">MAJOR</span>
+                                        <p class="mt-2">272,850,461.9֏</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between w-full mb-1 py-3 px-4 bg-white bg-opacity-5 rounded">
+                                    <img class="w-10 h-9 object-contain" src="./dist/images/casino/casino_icon_2.png" alt="">
+                                    <div class="text-right text-xs font-medium">
+                                        <span class="text-warning">MINOR</span>
+                                        <p class="mt-2">466,445.9֏</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between w-full mb-1 py-3 px-4 bg-white bg-opacity-5 rounded">
+                                    <img class="w-10 h-9 object-contain" src="./dist/images/casino/casino_icon_3.png" alt="">
+                                    <div class="text-right text-xs font-medium">
+                                        <span class="text-warning">MINI</span>
+                                        <p class="mt-2">10,642.9֏</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="casino_game-tab-6" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="casino_game-6-tab">
+                                <div class="w-full mb-1">
+                                    <a href="./casino_tournament_detail.html"><img class="w-full rounded" src="./dist/images/casino/casino_toura_1.png" alt=""></a>
+                                    <div class="block p-3 bg-white bg-opacity-10 rounded-b">
+                                        <b class="text-warning text-base font-medium">100,000 ֏</b>
+                                        <h5 class="text-base font-bold">VIRTUAL SPACE</h5>
+                                        <p class="mb-2 text-xs opacity-70">Buy in + Fee: 0֏<br>10.10.2024,05:01 <i class="bc-i-arrow-to fs10"></i>11.10.2024,04:59</p>
+                                        <button class="btn btn-success w-full">JOIN</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

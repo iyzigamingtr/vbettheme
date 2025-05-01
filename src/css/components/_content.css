@@ -1,0 +1,10 @@
+.content {
+    @apply min-w-0 min-h-screen flex-1 dark:bg-darkmode-700;
+    @include media-breakpoint-down(md) {
+        @apply max-w-full;
+    }
+    &:before {
+        content: "";
+        @apply w-full h-px block;
+    }
+}

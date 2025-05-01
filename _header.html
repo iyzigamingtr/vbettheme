@@ -1,0 +1,406 @@
+<header class="px-0 md:px-2.5">
+    <!-- top -->
+    <div class="flex items-center justify-between h-14 md:px-0 px-2.5">
+        <div class="flex items-center gap-2 md:gap-5">
+            <h1><a href="/"><img class="h-10 md:h-12" src="./dist/images/common/logo.svg" alt=""></a></h1>
+            <a href="https://t.me/VBET_AMBOT" target="_blank"><img class="w-9 md:w-16" src="./dist/images/common/telegram.svg" alt=""></a>
+        </div>
+        <div class="flex items-center gap-1 md:gap-2">
+            <div class="hidden md:flex items-center gap-2">
+                <button type="button" class="btn btn-primary h-7 px-1.5 bc-i-promotions"><span class="xl:block hidden ml-1">PROMOTIONS</span></button>
+                <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+                <button type="button" class="btn btn-success h-7 px-1.5 py-1.5"><i class="deposit-btn xl:hidden block"></i><span class="xl:block hidden ml-1 font-normal">DEPOSIT</span></button>
+                <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+                <button type="button" class="btn btn-success h-7 px-1.5 bc-i-community"><span class="xl:block hidden ml-1">OCCURSUM</span></button>
+                <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+            </div>
+
+            <a href="javascript:;" class="text-xs underline logout_show" onclick="modalOpen('sign_in-modal')">SIGN IN</a>
+            <button type="button" class="btn btn-primary h-7 px-1.5 py-1 text-xs logout_show" onclick="modalOpen('register-modal')"><span>REGISTER</span></button>
+
+            <div class="custom_hover">
+                <button class="h-7 px-2 text-xs rounded">0.0 <b>֏</b></button>
+                <div class="w-60 p-2.5 bg-bg">
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_deposit')"><i class="bc-i-circle-dollar"></i>Deposit</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_transfer')"><i class="bc-i-transfer"></i>Transfer</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_withdraw')"><i class="bc-i-withdraw"></i>Withdraw</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_history')"><i class="bc-i-history"></i>Transaction History</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_status')"><i class="bc-i-withdraws"></i>Withdraw Status</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_my')"><i class="bc-i-wallet"></i>My Wallets</a>
+                </div>
+            </div>
+
+            <hr class=" w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+
+            <div class="custom_hover">
+                <button class="py-1 px-2 rounded" onclick="modalOpen('profile-modal'); profileTabClick('profile_detail')"><i class="bc-i-user text-shadow-1 text-2xl"></i></button>
+                <div class="w-60 p-2.5 bg-bg">
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('bet_all')"><i class="bc-i-bet-builder-history"></i>Bet Builder history</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('balance_deposit')"><i class="bc-i-balance-management"></i>Balance Management</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('bonuses_spins')"><i class="bc-i-promotion"></i>Bonuses</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('profile_detail')"><i class="bc-i-user"></i>My Profile</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('message')"><i class="bc-i-message"></i>Messages</a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('cashback')"><i class="bc-i-cashback-cashout"></i>Cashback </a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded" onclick="modalOpen('profile-modal'); profileTabClick('bonus_pie')"><i class="bc-i-rewards"></i>BONUS - PIE </a>
+                    <a href="javascript:;" class="flex items-center gap-2 custom_btn h-8 rounded !mt-3"><i class="bc-i-logout"></i>Logout</a>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-2">
+                <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+                <div class="custom_select">
+                    <button class="flex items-center gap-2"><p class="flex items-center gap-2"><i class="flag-bc unitedkingdom"></i> <span class="xl:block hidden text-xs">ENG</span></p><i class="arrow noabsolute bc-i-small-arrow-down !fs8"></i></button>
+                    <div class="!w-24 bg-bg shadow-1">
+                        <ul class="p-2">
+                            <li><p class="flex items-center gap-2 w-full p-2 rounded"><i class="flag-bc unitedkingdom"></i><span class="text-xs">ENG</span></p></li>
+                            <li class="mt-1"><p class="flex items-center gap-2 w-full p-2 rounded"><i class="flag-bc armenia"></i><span class="text-xs">ARM</span></p></li>
+                            <li class="mt-1"><p class="flex items-center gap-2 w-full p-2 rounded"><i class="flag-bc russia"></i><span class="text-xs">RUS</span></p></li>
+                            <li class="mt-1"><p class="flex items-center gap-2 w-full p-2 rounded"><i class="flag-bc georgia"></i><span class="text-xs">GEO</span></p></li>
+                            <li class="mt-1"><p class="flex items-center gap-2 w-full p-2 rounded"><i class="flag-bc iran"></i><span class="text-xs">FAS</span></p></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class=" w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+                <p class="flex items-center h-7 px-2.5 text-xs bg-white bg-opacity-10 rounded now_time"><span class="hour"></span>:<span class="min"></span>:<span class="sec"></span></p>
+                <hr class="w-[1px] h-7 bg-white bg-opacity-10 border-none" />
+            </div>
+            <div class="custom_select px-1 md:px-2">
+                <button class="profile_btn relative flex items-center justify-center w-7 md:w-9 h-7 bg-white bg-opacity-10 rounded-full md:rounded"><i class="bc-i-vertical-toggle"></i><span class="absolute -right-1 -top-1 flex items-center justify-center w-4 h-4 bg-primary rounded-full text-xs">1</span></button>
+                <div class="!bg-bg h-auto">
+                    <ul>
+                        <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10"><i class="bc-i-history"></i></button></li>
+                        <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10" onclick="rightPopToggle('notification-right')"><i class="bc-i-notification"></i></button></li>
+                        <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10" onclick="rightPopToggle('favorite-right')"><i class="bc-i-star"></i></button></li>
+                        <li class="p-2 hover-primary-color"><button class="relative flex items-center justify-center w-full text-lg h-7 md:h-10"><i class="bc-i-message"></i><span class="absolute -right-1 -top-1 flex items-center justify-center w-4 h-4 bg-primary text-white rounded-full text-xs">1</span></button></li>
+                        <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10"><i class="bc-i-bonus"></i></button></li>
+                        <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10" onclick="rightPopToggle('settings-right')"><i class="bc-i-settings"></i></button></li>
+                        <li class="p-2 hover-primary-color"><button class="flex items-center justify-center w-full text-lg h-7 md:h-10"><i class="bc-i-live-chat"></i></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex md:hidden items-center gap-1.5 py-1 px-2.5 border-t border-white/5">
+        <button type="button" class="btn btn-primary h-6 px-1.5 bc-i-promotions"><span class="xl:block hidden ml-1">PROMOTIONS</span></button>
+        <button type="button" class="btn btn-success h-6 px-1.5 py-1.5"><i class="deposit-btn xl:hidden block"></i><span class="xl:block hidden ml-1 font-normal">DEPOSIT</span></button>
+        <button type="button" class="btn btn-success h-6 px-1.5 bc-i-community"><span class="xl:block hidden ml-1">OCCURSUM</span></button>
+    </div>
+
+    <!-- menu -->
+    <div class="gnb hidden md:flex items-center justify-between gap-3 bg-white/10 rounded">
+        <ul class="flex flex-wrap items-center h-9">
+            <li data-category="live">
+                <a href="./live.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-live"></i>Live</a>
+                <ul>
+                    <li><a href="./live.html" class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-sport"></i>Event View</a></li>
+                    <li class="new"><a href="./live_torunament.html" class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-tournament"></i>Tournaments</a></li>
+                    <li><a href="./live_calendar.html" class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-two-column"></i>Live Calendar</a></li>
+                    <li><a href="javascript:;" class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-statistics"></i>Statistics</a></li>
+                </ul>
+            </li>
+            <li data-category="sports">
+                <a href="./sports.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-prematch"></i>Sports</a>
+                <ul>
+                    <li><a href="./sports.html"  class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-sport"></i>Event View</a></li>
+                    <li class="new"><a href="./sports_tournament.html" class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-tournament"></i>Tournaments</a></li>
+                    <li><a href="./sports_calendar.html" class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-two-column"></i>Live Calendar</a></li>
+                    <li class="new"><a href="javascript:;" class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-statistics"></i>Statistics</a></li>
+                    <li><a href="./sports_results.html" class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-results"></i>Results</a></li>
+                </ul>
+            </li>
+            <li data-category="casino">
+                <a href="./casino.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-instantwin"></i>Casino</a>
+                <ul>
+                    <li><a href="./casino.html"  class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-casino"></i>Home</a></li>
+                    <li><a href="./casino_tournament.html" class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-tournament"></i>Tournaments</a></li>
+                    <li><a href="./casino_jackpot.html"  class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-jackpots"></i>Jackpot</a></li>
+                </ul>
+            </li>
+            <li class="hide12 spin" data-spin="0 SPIN" data-category="wheel"><a href="./wonderwheel.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-wonderwheel"></i>WONDER WHEEL</a></li>
+            <li class="hide11 new" data-category="tiktak"><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base">TIK TAK</a></li>
+            <li class="hide10" data-category="live_casino">
+                <a href="./live_casino.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-live-casino"></i>Live Casino</a>
+                <ul>
+                    <li><a href="./live_casino.html"  class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-live-casino"></i>Home</a></li>
+                    <li><a href="./live_casino_tournament.html" class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-tournament"></i>Tournaments</a></li>
+                </ul>
+            </li>
+            <li class="hide9" data-category="belote"><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-belote"></i>Belote</a></li>
+            <li class="hide8" data-category="poker"><a href="./poker.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-poker"></i>Poker</a></li>
+            <li class="hide7" data-category="esports"><a href="./esports.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-esports"></i>Esports</a></li>
+            <li class="hide6" data-category="tvgames">
+                <a href="./tvgame.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-tv"></i>TV Games</a>
+                <ul>
+                    <li><a href="./tvgame.html"  class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-tv"></i>Home</a></li>
+                    <li><a href="./tvgame_tournament.html" class="flex items-center gap-2.5 h-8 rounded text-base font-medium"><i class="bc-i-tournament"></i>Tournaments</a></li>
+                </ul>
+            </li>
+            <li class="hide5" data-category="games"><a href="./game.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-games"></i>Games</a></li>
+            <li class="hide4" data-category="virtual"><a href="./virtual_game.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-virtualbetting-3"></i>Virtual Games</a></li>
+            <li class="hide3" data-category="promotion"><a href="./promotion.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-promotions"></i>Promotions</a></li>
+            <li class="hide2 new" data-category="aviatrix"><a href="./aviatrix.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-aviatrix"></i>Aviatrix</a></li>
+        </ul>
+        <ul class="more">
+            <li>
+                <a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-apps"></i>MORE</a>
+                <ul>
+                    <li class="hide12"><a href="./wonderwheel.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-wonderwheel"></i>WONDER WHEEL</a></li>
+                    <li class="hide11"><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base">TIK TAK</a></li>
+                    <li class="hide10"><a href="./live_casino.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-live-casino"></i>Live Casino</a></li>
+                    <li class="hide9"><a href="javascript:;" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-belote"></i>Belote</a></li>
+                    <li class="hide8"><a href="./poker.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-poker"></i>Poker</a></li>
+                    <li class="hide7"><a href="./esports.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-esports"></i>Esports</a></li>
+                    <li class="hide6"><a href="./tvgame.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-tv"></i>TV Games</a></li>
+                    <li class="hide5"><a href="./game.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-games"></i>Games</a></li>
+                    <li class="hide4"><a href="./virtual_game.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-virtualbetting-3"></i>Virtual Games</a></li>
+                    <li class="hide3"><a href="./promotion.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-promotions"></i>Promotions</a></li>
+                    <li class="hide2 new"><a href="./aviatrix.html" class="flex items-center gap-2.5 px-5 h-9 text-base"><i class="bc-i-aviatrix"></i>Aviatrix</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mo_gnb md:hidden flex items-center border-t border-b border-white/10">
+        <ul class="overflow-x-auto noscrollbar flex whitespace-nowrap uppercase">
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">Live</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">Sports</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">Casino</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">WONDER WHEEL</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">TIK TAK</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">Live Casino</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">Belote</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">Poker</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">Esports</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">TV Games</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">Games</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">Virtual Games</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">Promotions</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center px-3 h-10 fs10">Aviatrix</a></li>
+        </ul>
+    </div>
+
+    <!-- sub_menu -->
+    <div class="sub_menu">
+        <ul class="grid grid-cols-4 md:flex items-center justify-center gap-0 md:gap-7" data-sub-cate="live">
+            <li><a href="./live.html" class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-sport"></i>Event View</a></li>
+            <li class="new"><a href="./live_torunament.html" class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-tournament"></i>Tournaments</a></li>
+            <li><a href="./live_calendar.html" class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-two-column"></i>Live Calendar</a></li>
+            <li><a href="javascript:;" class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-statistics"></i>Statistics</a></li>
+        </ul>
+        <div class="overflow-x-auto noscrollbar">
+            <ul class="md:flex items-center justify-center gap-0 md:gap-7" data-sub-cate="sports">
+                <li><a href="./sports.html"  class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-sport"></i>Event View</a></li>
+                <li class="new"><a href="./sports_tournament.html" class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-tournament"></i>Tournaments</a></li>
+                <li><a href="./sports_calendar.html" class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-two-column"></i>Live Calendar</a></li>
+                <li class="new"><a href="javascript:;" class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-statistics"></i>Statistics</a></li>
+                <li><a href="./sports_results.html" class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-results"></i>Results</a></li>
+            </ul>
+        </div>
+        <ul class="grid grid-cols-3 md:flex items-center justify-center gap-0 md:gap-7" data-sub-cate="casino">
+            <li><a href="./casino.html"  class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-casino"></i>Home</a></li>
+            <li><a href="./casino_tournament.html" class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-tournament"></i>Tournaments</a></li>
+            <li><a href="./casino_jackpot.html"  class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-jackpots"></i>Jackpot</a></li>
+        </ul>
+        <ul class="grid grid-cols-3 md:flex items-center justify-center gap-0 md:gap-7" data-sub-cate="live_casino">
+            <li><a href="./live_casino.html"  class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-live-casino"></i>Home</a></li>
+            <li><a href="./live_casino_tournament.html" class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-tournament"></i>Tournaments</a></li>
+        </ul>
+        <ul class="grid grid-cols-3 md:flex items-center justify-center gap-0 md:gap-7" data-sub-cate="tvgames">
+            <li><a href="./tvgame.html"  class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-tv"></i>Home</a></li>
+            <li><a href="./tvgame_tournament.html" class="flex items-center justify-center gap-2.5 h-9 rounded text-xs md:text-base font-medium"><i class="md:block hidden bc-i-tournament"></i>Tournaments</a></li>
+        </ul>
+    </div>
+
+</header>
+
+
+
+<!-- 모바일 하단메뉴 -->
+<div class="mo_quick md:hidden block">
+    <ul>
+        <li data-sub-cate="live"><a href="./live.html"><i class="bc-i-live"></i><span class="fs10">Live</span><b>64</b></a></li>
+        <li data-sub-cate="sport"><a href="./sports.html"><i class="bc-i-prematch"></i><span class="fs10">Sport</span></a></li>
+        <li data-sub-cate="occursum"><a href="javascript:;"><i class="bc-i-chat"></i><span class="fs10">Occursum</span></a></li>
+        <li><a href="javascript:;"><i class="bc-i-betslip"></i><span class="fs10">BetSlip</span><b>1</b></a></li>
+        <li data-sub-cate="casino"><a href="./casino.html"><i class="bc-i-slots"></i><span class="fs10">Casino</span></a></li>
+        <!-- <li data-sub-cate="livecasino"><a href="./live_casino.html"><i class="bc-i-livecasino"></i><span class="fs10">Live Casino</span></a></li> -->
+        <li class="menu"><a href="javascript:;" onclick="moMenuToggle()"><i class="bc-i-burger"></i><span class="fs10">Menu</span></a></li>
+    </ul>
+</div>
+
+<div class="mo_quick_menu">
+    <div class="z-10 sticky top-0 flex items-center justify-between h-11 px-2 border-b border-white border-opacity-10 bg-bg">
+        <h4>MENU</h4>
+        <button class="bc-i-close-remove" onclick="moMenuToggle()"></button>
+    </div>
+    <ul class="menu">
+        <li>
+            <a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded" onclick="menuToggle(this,'on')"><i class="flex items-center justify-center w-7 h-7 bc-i-live bg-[#ff0087] rounded"></i><p class="flex items-center justify-between flex-grow">Live <span><i class="bc-i-small-arrow-right"></i></span></p></a>
+            <div class="depth2">
+                <ul>
+                    <li class="prev_btn"><a href="javascript:;" onclick="menuToggle(this,'off')"><i class="bc-i-small-arrow-left"></i>IN-PLAY</a></li>
+                    <li><a href="./live.html">Event View</a></li>
+                    <li><a href="./live_tournament.html">Tournaments</a></li>
+                    <li><a href="./live_calendar.htmlmm">Live Calendar</a></li>
+                    <li><a href="javascript:;">Statistics</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded" onclick="menuToggle(this,'on')"><i class="flex items-center justify-center w-7 h-7 bc-i-prematch bg-[#6585a1] rounded"></i><p class="flex items-center justify-between flex-grow">Sports <span><i class="bc-i-small-arrow-right"></i></span></p></a>
+            <div class="depth2">
+                <ul>
+                    <li class="prev_btn"><a href="javascript:;" onclick="menuToggle(this,'off')"><i class="bc-i-small-arrow-left"></i>SPORTS</a></li>
+                    <li><a href="./sports.html" >Event View</a></li>
+                    <li><a href="./sports_tournament.html">Tournaments</a></li>
+                    <li><a href="./sports_calendar.html">Live Calendar</a></li>
+                    <li><a href="javascript:;">Statistics</a></li>
+                    <li><a href="./sports_results.html">Results</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded" onclick="menuToggle(this,'on')"><i class="flex items-center justify-center w-7 h-7 bc-i-instantwin bg-[#6585a1] rounded"></i><p class="flex items-center justify-between flex-grow">Casino <span><i class="bc-i-small-arrow-right"></i></span></p></a>
+            <div class="depth2">
+                <ul>
+                    <li class="prev_btn"><a href="javascript:;" onclick="menuToggle(this,'off')"><i class="bc-i-small-arrow-left"></i>CASINO</a></li>
+                    <li><a href="./casino.html" >Home</a></li>
+                    <li><a href="./casino_tournament.html">Tournaments</a></li>
+                    <li><a href="./casino_jackpot.html">Jackpot</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="./wonderwheel.html" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-wonderwheel bg-[#6200ff] rounded"></i>WONDER WHEEL</a></li>
+        <li><a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-default-icon bg-[#6585a1] rounded"></i>TIK TAK</a></li>
+        <li>
+            <a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded" onclick="menuToggle(this,'on')"><i class="flex items-center justify-center w-7 h-7 bc-i-live-casino bg-[#6585a1] rounded"></i><p class="flex items-center justify-between flex-grow">Live Casino <span><i class="bc-i-small-arrow-right"></i></span></p></a>
+            <div class="depth2">
+                <ul>
+                    <li class="prev_btn"><a href="javascript:;" onclick="menuToggle(this,'off')"><i class="bc-i-small-arrow-left"></i>LIVE CASINO</a></li>
+                    <li><a href="./live_casino.html" >Home</a></li>
+                    <li><a href="./live_casino_tournament.html">Tournaments</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-belote bg-[#6585a1] rounded"></i>Belote</a></li>
+        <li><a href="./poker.html" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-poker bg-[#3d6403] rounded"></i>Poker</a></li>
+        <li><a href="./esports.html" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-esports bg-[#34b2b2] rounded"></i>Esports</a></li>
+        <li>
+            <a href="javascript:;" class="px-3 bg-white bg-opacity-10 rounded" onclick="menuToggle(this,'on')"><i class="flex items-center justify-center w-7 h-7 bc-i-tv bg-[#640303] rounded"></i><p class="flex items-center justify-between flex-grow">TV Games <span><i class="bc-i-small-arrow-right"></i></span></p></a>
+            <div class="depth2">
+                <ul>
+                    <li class="prev_btn"><a href="javascript:;" onclick="menuToggle(this,'off')"><i class="bc-i-small-arrow-left"></i>TV GAMES</a></li>
+                    <li><a href="./tvgame.html" >Home</a></li>
+                    <li><a href="./tvgame_tournament.html">Tournaments</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="./game.html" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-games bg-[#f51919] rounded"></i>Games</a></li>
+        <li><a href="./virtual_game.html" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-virtualbetting-3 bg-[#6585a1] rounded"></i>Virtual Games</a></li>
+        <li><a href="./promotion.html" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-promotions bg-[#a13d6a] rounded"></i>Promotions</a></li>
+        <li><a href="./aviatrix.html" class="px-3 bg-white bg-opacity-10 rounded"><i class="flex items-center justify-center w-7 h-7 bc-i-aviatrix bg-[#6585a1] rounded"></i>Aviatrix</a></li>
+    </ul>
+</div>
+
+
+<!-- notifi -->
+<div id="notification-right" class="right_pop_area">
+    <div class="right_pop_box">
+        <div class="flex items-center gap-2 px-2 h-12 border-b border-white border-opacity-10 text-base font-medium">
+            <button class="p-2 bc-i-close-remove text-xs" onclick="rightPopToggle('notification-right')"></button>
+            WHAT'S NEW
+        </div>
+        <div class="flex-1 flex items-center justify-center w-full">
+            <div class="text-white text-opacity-70">You have no new notifications</div>
+        </div>
+    </div>
+</div>
+
+<!-- favorite -->
+<div id="favorite-right" class="right_pop_area">
+    <div class="right_pop_box">
+        <div class="flex items-center gap-2 px-2 h-12 border-b border-white border-opacity-10 text-base font-medium">
+            <button class="p-2 bc-i-close-remove text-xs" onclick="rightPopToggle('favorite-right')"></button>
+            FAVORITES
+        </div>
+        <div class="flex-1 w-full p-3">
+            <div class="text-right"><button class="text-white text-opacity-70">Remove All</button></div>
+            <div class="grid grid-cols-2 gap-2 ">
+                <div class="overflow-hidden casino_item rounded">
+                    <a href="javascript:;"><img src="./dist/images/casino/casino_3.gif" alt=""></a>
+                    <div class="hover_box flex flex-col justify-between items-center md:p-2.5 md:pb-7 p-1.5 pb-3">
+                        <div class="flex items-center justify-between w-full text-xs md:text-base">
+                            <button class="bc-i-favorite"></button>
+                            <button class="bc-i-info"></button>
+                        </div>
+                        <div class="font-bold text-xs md:text-base text-center">Fiery Fruits More Spins</div>
+                        <div class="btn_box flex items-center justify-center gap-2">
+                            <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3 btn-success">PLAY</button>
+                            <button class="btn btn-sm md:py-1.5 py-0.5 px-1 md:px-3">DEMO</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="p-5 text-white text-center text-opacity-70">You don't have favorite games. To add some, click the star icon near the game name.</div>
+        </div>
+    </div>
+</div>
+
+<!-- settings -->
+<div id="settings-right" class="right_pop_area">
+    <div class="right_pop_box">
+        <div class="flex items-center gap-2 px-2 h-12 border-b border-white border-opacity-10 text-base font-medium">
+            <button class="p-2 bc-i-close-remove text-xs" onclick="rightPopToggle('settings-right')"></button>
+            SETTINGS
+        </div>
+        <div class="flex-1 w-full p-3">
+            <div class="grid grid-cols-2 gap-2 ">
+
+                <div class="custom_select">
+                    <button class="w-full py-1.5 px-4 bg-white bg-opacity-15 rounded text-left">
+                        <span class="text-xs opacity-40">Language</span>
+                        <p class="flex items-center gap-2"><i class="flag-bc unitedkingdom"></i> English</p> 
+                        <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                    </button>
+                    <div class="!top-full bg-bg w-full p-3 shadow-2">
+                        <div class="relative mb-1">
+                            <input type="text" class="form-control w-full pr-12 !bg-white !bg-opacity-15" placeholder="Search Country"> 
+                            <i class="bc-i-search absolute right-0 top-0 flex items-center justify-center w-9 h-9"></i>
+                        </div>
+                        <ul>
+                            <li class="px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc unitedkingdom"></i> English</p> </li>
+                            <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc armenia"></i> Հայերեն</p></li>
+                            <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p class="flex items-center gap-2"><i class="flag-bc russia"></i> Русский</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="custom_select">
+                    <button class="w-full py-1.5 px-4 bg-white bg-opacity-15 rounded text-left">
+                        <span class="text-xs opacity-40">Time format</span>
+                        <p>24h</p>
+                        <i class="arrow bc-i-small-arrow-down !fs10"></i>
+                    </button>
+                    <div class="!top-full bg-bg w-full p-3 shadow-2">
+                        <div class="relative mb-1">
+                            <input type="text" class="form-control w-full pr-12 !bg-white !bg-opacity-15" placeholder="Search Country"> 
+                            <i class="bc-i-search absolute right-0 top-0 flex items-center justify-center w-9 h-9"></i>
+                        </div>
+                        <ul>
+                            <li class="px-3 h-8 text-xs !font-normal rounded"><p>12h</p></li>
+                            <li class="mt-[2px] px-3 h-8 text-xs !font-normal rounded"><p>24h</p></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-span-2 text-lg font-medium text-white text-opacity-60">THEME</div>
+                <div class="sp-theme-item-bc theme-default active dark" onclick="btnActiveRadio(this); themeColor()" style="background: rgb(0, 12, 36);"><div class="sp-theme-container"><span class="user-profile-nav-item-cursor"></span><div class="sp-theme-container-aside"><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p></div><div class="sp-theme-container-content"><div class="sp-them-logo"><span>Logo</span></div><div class="sp-theme-container-content-top"><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p></div><div class="sp-theme-container-content-middle"><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p></div><p class="sp-theme-bottom-item"></p><p class="sp-theme-last-item"></p></div></div></div>
+                <div class="sp-theme-item-bc theme-black  dark" onclick="btnActiveRadio(this); themeColor('black')" style="background: rgb(12, 12, 18);"><div class="sp-theme-container"><span class="user-profile-nav-item-cursor"></span><div class="sp-theme-container-aside"><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p></div><div class="sp-theme-container-content"><div class="sp-them-logo"><span>Logo</span></div><div class="sp-theme-container-content-top"><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p></div><div class="sp-theme-container-content-middle"><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p></div><p class="sp-theme-bottom-item"></p><p class="sp-theme-last-item"></p></div></div></div>
+                <div class="sp-theme-item-bc theme-white  light" onclick="btnActiveRadio(this); themeColor('light')" style="background: rgb(227, 227, 237);"><div class="sp-theme-container"><span class="user-profile-nav-item-cursor"></span><div class="sp-theme-container-aside"><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p></div><div class="sp-theme-container-content"><div class="sp-them-logo"><span>Logo</span></div><div class="sp-theme-container-content-top"><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p></div><div class="sp-theme-container-content-middle"><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p></div><p class="sp-theme-bottom-item"></p><p class="sp-theme-last-item"></p></div></div></div>
+                <div class="sp-theme-item-bc theme-blue  dark" onclick="btnActiveRadio(this); themeColor('type2')" style="background: rgb(36, 36, 71);"><div class="sp-theme-container"><span class="user-profile-nav-item-cursor"></span><div class="sp-theme-container-aside"><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p><p class="sp-theme-container-item"></p></div><div class="sp-theme-container-content"><div class="sp-them-logo"><span>Logo</span></div><div class="sp-theme-container-content-top"><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p><p class="sp-theme-top-item"></p></div><div class="sp-theme-container-content-middle"><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p><p class="sp-theme-middle-item"></p></div><p class="sp-theme-bottom-item"></p><p class="sp-theme-last-item"></p></div></div></div>
+
+            </div>
+        </div>
+    </div>
+</div>
